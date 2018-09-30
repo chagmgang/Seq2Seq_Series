@@ -3,8 +3,9 @@ import tensorflow as tf
 class s2s:
     def __init__(self, enc_sent_size, output_sent_size, vocab_size):
 
+        self.enc_input_size = enc_sent_size - 1
 
-        self.enc_input = tf.placeholder(tf.float32, [None, enc_sent_size - 1, vocab_size])
+        self.enc_input = tf.placeholder(tf.float32, [None, self.enc_input_size, vocab_size])
         self.dec_input = tf.placeholder(tf.float32, [None, output_sent_size, vocab_size])
         # [batch size, time steps]
         self.targets = tf.placeholder(tf.int64, [None, None])
@@ -21,8 +22,17 @@ class s2s:
             outputs_dec, dec_states = tf.nn.dynamic_rnn(cell=dec_cell, inputs=self.dec_input, initial_state=enc_states,
                                         dtype=tf.float32)
 
-        self.model = tf.layers.dense(outputs_dec, vocab_size, activation=None)
+        expand_outputs_dec = tf.expand_dims(outputs_dec, 2)
+        expand_outputs_enc = tf.expand_dims(outputs_enc, 1)
+        tile_outputs_dec = tf.tile(expand_outputs_dec, [1, 1, self.enc_input_size, 1])
 
+        context_vector = tf.multiply(tile_outputs_dec, expand_outputs_enc)
+        context_vector_reshape = tf.reshape(context_vector, [-1, output_sent_size, 128 * self.enc_input_size])
+        context_vector = tf.layers.dense(inputs=context_vector_reshape, units=128, activation=None)
+        
+        output = tf.multiply(context_vector, outputs_dec)
+
+        self.model = tf.layers.dense(output, vocab_size, activation=None)
 
         self.cost = tf.reduce_mean(
                 tf.nn.sparse_softmax_cross_entropy_with_logits(

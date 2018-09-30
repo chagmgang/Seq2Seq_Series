@@ -2,7 +2,7 @@
 # 영어 단어를 한국어 단어로 번역하는 프로그램을 만들어봅니다.
 import tensorflow as tf
 import numpy as np
-from seq2seq_model import s2s
+from attention_model import s2s
 
 # S: 디코딩 입력의 시작을 나타내는 심볼
 # E: 디코딩 출력을 끝을 나타내는 심볼
@@ -65,7 +65,6 @@ S2S = s2s(enc_sent_size, output_sent_size, vocab_size)
 
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
-
 
 for epoch in range(total_epoch):
     _, loss = sess.run([S2S.optimizer, S2S.cost],
