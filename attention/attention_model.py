@@ -5,10 +5,10 @@ class s2s:
 
         self.enc_input_size = enc_sent_size - 1
 
-        self.enc_input = tf.placeholder(tf.float32, [None, self.enc_input_size, vocab_size])
-        self.dec_input = tf.placeholder(tf.float32, [None, output_sent_size, vocab_size])
+        self.enc_input = tf.placeholder(tf.float32, [None, self.enc_input_size, vocab_size], name='inputs')
+        self.dec_input = tf.placeholder(tf.float32, [None, output_sent_size, vocab_size], name='outputs')
         # [batch size, time steps]
-        self.targets = tf.placeholder(tf.int64, [None, None])
+        self.targets = tf.placeholder(tf.int64, [None, None], name='targets')
 
 
         with tf.variable_scope('encode'):
@@ -40,4 +40,4 @@ class s2s:
 
         self.optimizer = tf.train.AdamOptimizer(0.001).minimize(self.cost)
 
-        self.prediction = tf.argmax(self.model, 2)
+        self.prediction = tf.argmax(self.model, 2, name='prediction')
