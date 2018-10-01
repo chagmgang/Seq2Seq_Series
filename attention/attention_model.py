@@ -12,12 +12,12 @@ class s2s:
 
 
         with tf.variable_scope('encode'):
-            enc_cell = [tf.nn.rnn_cell.GRUCell(size) for size in [256, 128]]
+            enc_cell = [tf.nn.rnn_cell.GRUCell(size) for size in [1024, 512, 256, 128]]
             enc_cell = tf.nn.rnn_cell.MultiRNNCell(enc_cell)
             outputs_enc, enc_states = tf.nn.dynamic_rnn(cell=enc_cell, inputs=self.enc_input, dtype=tf.float32)
 
         with tf.variable_scope('decode'):
-            dec_cell = [tf.nn.rnn_cell.GRUCell(size) for size in [256, 128]]
+            dec_cell = [tf.nn.rnn_cell.GRUCell(size) for size in [1024, 512, 256, 128]]
             dec_cell = tf.nn.rnn_cell.MultiRNNCell(dec_cell)
             outputs_dec, dec_states = tf.nn.dynamic_rnn(cell=dec_cell, inputs=self.dec_input, initial_state=enc_states,
                                         dtype=tf.float32)

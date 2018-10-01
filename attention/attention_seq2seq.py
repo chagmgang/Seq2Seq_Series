@@ -6,19 +6,19 @@ from konlpy.tag import Twitter
 twitter = Twitter()
 
 input_sent = []
-with open('input.log', 'r', encoding='utf-8') as content_file:
+with open('/home/fitlab/Seq2Seq_Series/input.log', 'r', encoding='utf-8') as content_file:
     for line in content_file:
         tag = twitter.pos(line)[:-1]
         input_sent.append([i[0] for i in tag])
 
 output_sent = []
-with open('output.log', 'r', encoding='utf-8') as content_file:
+with open('/home/fitlab/Seq2Seq_Series/output.log', 'r', encoding='utf-8') as content_file:
     for line in content_file:
         tag = twitter.pos(line)[:-1]
         output_sent.append([i[0] for i in tag])
 
 vocab_list = []
-with open('vocab.log', 'r', encoding='utf-8') as content_file:
+with open('/home/fitlab/Seq2Seq_Series/vocab.log', 'r', encoding='utf-8') as content_file:
     for line in content_file:
         vocab_list.append(line[:-1])
 
@@ -55,8 +55,7 @@ for i, o in zip(input_sent, output_sent):
     target_batch.append(target)
 
 
-learning_rate = 0.01
-total_epoch = 100
+total_epoch = 3000
 n_class = n_input = num_dic
 
 enc_sent_size = max_len_i + 1
@@ -113,7 +112,32 @@ result = sess.run(S2S.prediction,
                                  S2S.dec_input: output_result,
                                  S2S.targets: target_result})
 
-re = result[0]
+for inp in input_result:
+    x = []
+    for i in inp:
+        for name, age in vocab_dict.items():
+            y = np.argmax(i)
+            if y == age:
+                x.append(name)
+    x = ' '.join(x)
+    x = x.replace('<%>', '')
+    x = x.replace('<end>', '')
+    print('질문:', x)
+
+print('--------------')
+
+for target in target_batch:
+    x = []
+    for tar in target:
+        for name, age in vocab_dict.items():
+            if tar == age:
+                x.append(name)
+    x = ' '.join(x)
+    x = x.replace('<%>', '')
+    x = x.replace('<end>', '')
+    print('답변:', x)
+
+print('--------------')
 
 for re in result:
     x = []
@@ -124,4 +148,4 @@ for re in result:
     x = ' '.join(x)
     x = x.replace('<%>', '')
     x = x.replace('<end>', '')
-    print(x)
+    print('답변:', x)
