@@ -1,0 +1,1550 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fe192d6bb80, pid=5086, tid=0x00007fe1f7a5c700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_181-b13) (build 1.8.0_181-8u181-b13-0ubuntu0.16.04.1-b13)
+# Java VM: OpenJDK 64-Bit Server VM (25.181-b13 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [_message.cpython-35m-x86_64-linux-gnu.so+0xacb80]  google::protobuf::python::file_descriptor::Dealloc(google::protobuf::python::PyFileDescriptor*)+0x60
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00005638a25e0000):  JavaThread "main" [_thread_in_native, id=5086, stack(0x00007ffc95393000,0x00007ffc95493000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000019
+
+Registers:
+RAX=0x00000035f7a1c9ee, RBX=0x00007fe18d1ed058, RCX=0x00007fe18d219000, RDX=0x0000000000000162
+RSP=0x00007ffc95490300, RBP=0x00007fe1930e5120, RSI=0x0000000000000030, RDI=0x00007fe186ae3d88
+R8 =0x0000000000000001, R9 =0x0000000000000199, R10=0x00005638a17b9ea0, R11=0x0000000000000162
+R12=0x00005638a12e3140, R13=0x00005638a12e3c50, R14=0x0000000000000b10, R15=0x00007fe186ae3d88
+RIP=0x00007fe192d6bb80, EFLAGS=0x0000000000010206, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007ffc95490300)
+0x00007ffc95490300:   00005638a0e23e78 00005638a17c8150
+0x00007ffc95490310:   00005638a17c8408 00005638a17c80e0
+0x00007ffc95490320:   000056389f195560 000056389ed6d010
+0x00007ffc95490330:   000056389f198480 000056389ed6cfa2
+0x00007ffc95490340:   000056389f195560 00007fe18d1dbe70
+0x00007ffc95490350:   00007fe18d1dbe88 000056389fa6de98
+0x00007ffc95490360:   000056389f195560 000056389ed6d01a
+0x00007ffc95490370:   000056389fa6de98 000056389ed80c94
+0x00007ffc95490380:   ffffffffffffff5e 00005638a0d657a0
+0x00007ffc95490390:   000056389f178960 0000000000000002
+0x00007ffc954903a0:   00007fe193393458 00007ffc95490420
+0x00007ffc954903b0:   00007ffc95490400 000000000000153b
+0x00007ffc954903c0:   00007fe18d1dbe88 0000000000000000
+0x00007ffc954903d0:   00007ffc95490400 00007ffc95490400
+0x00007ffc954903e0:   00007ffc95490420 0000000000000000
+0x00007ffc954903f0:   0000000000000000 0000000100000002
+0x00007ffc95490400:   00007ffc95490400 00007ffc95490400
+0x00007ffc95490410:   000000009fa07e88 654dd8f335617000
+0x00007ffc95490420:   00007fe18d1dbe70 00007fe1f5babb70
+0x00007ffc95490430:   00005638a09c5478 00005638a25b0c18
+0x00007ffc95490440:   00007fe1f7981b70 00007fe1f5babb70
+0x00007ffc95490450:   00005638a25b0c18 654dd8f335617000
+0x00007ffc95490460:   00007ffc95490460 00007ffc95490460
+0x00007ffc95490470:   000056389f197120 654dd8f335617000
+0x00007ffc95490480:   00007fe17f59fa48 00007fe191d10a88
+0x00007ffc95490490:   00007fe1f7a48b48 00007fe18d5a7188
+0x00007ffc954904a0:   00007fe186a583c8 00007ffc954904e0
+0x00007ffc954904b0:   000056389f9e0f80 000056389ee88a2a
+0x00007ffc954904c0:   00007fe186a583c8 000056389ee18750
+0x00007ffc954904d0:   00007ffc954904e8 00007ffc954904f0
+0x00007ffc954904e0:   00007fe1f5c02958 00007fe1f5c074c8
+0x00007ffc954904f0:   0000000000001000 654dd8f335617000 
+
+Instructions: (pc=0x00007fe192d6bb80)
+0x00007fe192d6bb60:   f7 f1 4c 8d 34 d5 00 00 00 00 49 89 d3 4f 8d 2c
+0x00007fe192d6bb70:   34 49 8b 7d 00 48 85 ff 74 72 4c 8b 07 49 89 ff
+0x00007fe192d6bb80:   49 8b 70 18 49 39 f2 74 2b 0f 1f 80 00 00 00 00
+0x00007fe192d6bb90:   49 8b 08 48 85 c9 74 54 48 8b 71 18 31 d2 48 89 
+
+Register to memory mapping:
+
+RAX=0x00000035f7a1c9ee is an unknown value
+RBX=0x00007fe18d1ed058 is an unknown value
+RCX=0x00007fe18d219000 is an unknown value
+RDX=0x0000000000000162 is an unknown value
+RSP=0x00007ffc95490300 is pointing into the stack for thread: 0x00005638a25e0000
+RBP=0x00007fe1930e5120: _ZN6google8protobuf6python20interned_descriptorsE+0 in /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/google/protobuf/pyext/_message.cpython-35m-x86_64-linux-gnu.so at 0x00007fe192cbf000
+RSI=0x0000000000000030 is an unknown value
+RDI=0x00007fe186ae3d88 is an unknown value
+R8 =0x0000000000000001 is an unknown value
+R9 =0x0000000000000199 is an unknown value
+R10=0x00005638a17b9ea0 is an unknown value
+R11=0x0000000000000162 is an unknown value
+R12=0x00005638a12e3140 is an unknown value
+R13=0x00005638a12e3c50 is an unknown value
+R14=0x0000000000000b10 is an unknown value
+R15=0x00007fe186ae3d88 is an unknown value
+
+
+Stack: [0x00007ffc95393000,0x00007ffc95493000],  sp=0x00007ffc95490300,  free space=1012k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [_message.cpython-35m-x86_64-linux-gnu.so+0xacb80]  google::protobuf::python::file_descriptor::Dealloc(google::protobuf::python::PyFileDescriptor*)+0x60
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007fe13c001000 JavaThread "SIGTERM handler" daemon [_thread_blocked, id=5169, stack(0x00007fe1606c3000,0x00007fe1607c4000)]
+  0x00005638a37d1800 JavaThread "Thread-0" [_thread_blocked, id=5110, stack(0x00007fe16a5f1000,0x00007fe16a6f2000)]
+  0x00005638a378a000 JavaThread "Service Thread" daemon [_thread_blocked, id=5108, stack(0x00007fe16a7f3000,0x00007fe16a8f4000)]
+  0x00005638a3775000 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=5107, stack(0x00007fe16a8f4000,0x00007fe16a9f5000)]
+  0x00005638a3773000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=5106, stack(0x00007fe16a9f5000,0x00007fe16aaf6000)]
+  0x00005638a3770000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=5105, stack(0x00007fe16aaf6000,0x00007fe16abf7000)]
+  0x00005638a373d800 JavaThread "Finalizer" daemon [_thread_blocked, id=5103, stack(0x00007fe16acf8000,0x00007fe16adf9000)]
+  0x00005638a3738800 JavaThread "Reference Handler" daemon [_thread_blocked, id=5102, stack(0x00007fe16adf9000,0x00007fe16aefa000)]
+=>0x00005638a25e0000 JavaThread "main" [_thread_in_native, id=5086, stack(0x00007ffc95393000,0x00007ffc95493000)]
+
+Other Threads:
+  0x00005638a3731000 VMThread [stack: 0x00007fe16aefa000,0x00007fe16affb000] [id=5101]
+
+VM state:at safepoint (shutting down)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00005638a25d7220] Threads_lock - owner thread: 0x00005638a3731000
+
+Heap:
+ PSYoungGen      total 268288K, used 95532K [0x00000000eab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 258048K, 33% used [0x00000000eab00000,0x00000000efe4c958,0x00000000fa700000)
+  from space 10240K, 99% used [0x00000000fa700000,0x00000000fb0fe748,0x00000000fb100000)
+  to   space 41984K, 0% used [0x00000000fd700000,0x00000000fd700000,0x0000000100000000)
+ ParOldGen       total 171008K, used 73365K [0x00000000c0000000, 0x00000000ca700000, 0x00000000eab00000)
+  object space 171008K, 42% used [0x00000000c0000000,0x00000000c47a5648,0x00000000ca700000)
+ Metaspace       used 12121K, capacity 12738K, committed 12928K, reserved 1060864K
+  class space    used 1797K, capacity 1912K, committed 1920K, reserved 1048576K
+
+Card table byte_map: [0x00007fe16df24000,0x00007fe16e125000] byte_map_base: 0x00007fe16d924000
+
+Marking Bits: (ParMarkBitMap*) 0x00007fe17f29b3a0
+ Begin Bits: [0x00007fe16b9ca000, 0x00007fe16c9ca000)
+ End Bits:   [0x00007fe16c9ca000, 0x00007fe16d9ca000)
+
+Polling page: 0x00007fe1f7a74000
+
+CodeCache: size=245760Kb used=8526Kb max_used=8547Kb free=237233Kb
+ bounds [0x00007fe16e4e5000, 0x00007fe16ed55000, 0x00007fe17d4e5000]
+ total_blobs=2912 nmethods=2599 adapters=226
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 2.301 Thread 0x00005638a3773000 nmethod 2543 0x00007fe16ed33250 code [0x00007fe16ed33680, 0x00007fe16ed359f8]
+Event: 2.301 Thread 0x00005638a3773000 2541       4       java.util.ArrayList::add (29 bytes)
+Event: 2.304 Thread 0x00005638a3773000 nmethod 2541 0x00007fe16ed2c7d0 code [0x00007fe16ed2c940, 0x00007fe16ed2cc78]
+Event: 2.304 Thread 0x00005638a3773000 2586       4       scala.collection.immutable.StringOps::toString (11 bytes)
+Event: 2.304 Thread 0x00005638a3773000 nmethod 2586 0x00007fe16ed2c550 code [0x00007fe16ed2c6a0, 0x00007fe16ed2c738]
+Event: 2.304 Thread 0x00005638a3773000 2576       4       org.openkoreantext.processor.util.CharArrayMap::containsKey (33 bytes)
+Event: 2.310 Thread 0x00005638a3773000 nmethod 2576 0x00007fe16ed2bad0 code [0x00007fe16ed2bc40, 0x00007fe16ed2c098]
+Event: 2.310 Thread 0x00005638a3773000 2599       4       scala.collection.mutable.ArrayBuffer::$plus$eq (6 bytes)
+Event: 2.311 Thread 0x00005638a3773000 nmethod 2599 0x00007fe16ed2b650 code [0x00007fe16ed2b7a0, 0x00007fe16ed2b8f8]
+Event: 2.323 Thread 0x00005638a3770000 nmethod 2596 0x00007fe16ed3e5d0 code [0x00007fe16ed3eac0, 0x00007fe16ed41058]
+
+GC Heap History (10 events):
+Event: 0.803 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 74752K, used 64512K [0x00000000eab00000, 0x00000000efe00000, 0x0000000100000000)
+  eden space 64512K, 100% used [0x00000000eab00000,0x00000000eea00000,0x00000000eea00000)
+  from space 10240K, 0% used [0x00000000ef400000,0x00000000ef400000,0x00000000efe00000)
+  to   space 10240K, 0% used [0x00000000eea00000,0x00000000eea00000,0x00000000ef400000)
+ ParOldGen       total 171008K, used 0K [0x00000000c0000000, 0x00000000ca700000, 0x00000000eab00000)
+  object space 171008K, 0% used [0x00000000c0000000,0x00000000c0000000,0x00000000ca700000)
+ Metaspace       used 9705K, capacity 10050K, committed 10240K, reserved 1058816K
+  class space    used 1439K, capacity 1526K, committed 1536K, reserved 1048576K
+Event: 0.825 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 74752K, used 10210K [0x00000000eab00000, 0x00000000f3d00000, 0x0000000100000000)
+  eden space 64512K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000eea00000)
+  from space 10240K, 99% used [0x00000000eea00000,0x00000000ef3f8990,0x00000000ef400000)
+  to   space 10240K, 0% used [0x00000000f3300000,0x00000000f3300000,0x00000000f3d00000)
+ ParOldGen       total 171008K, used 4824K [0x00000000c0000000, 0x00000000ca700000, 0x00000000eab00000)
+  object space 171008K, 2% used [0x00000000c0000000,0x00000000c04b6018,0x00000000ca700000)
+ Metaspace       used 9705K, capacity 10050K, committed 10240K, reserved 1058816K
+  class space    used 1439K, capacity 1526K, committed 1536K, reserved 1048576K
+}
+Event: 0.965 GC heap before
+{Heap before GC invocations=2 (full 0):
+ PSYoungGen      total 74752K, used 74722K [0x00000000eab00000, 0x00000000f3d00000, 0x0000000100000000)
+  eden space 64512K, 100% used [0x00000000eab00000,0x00000000eea00000,0x00000000eea00000)
+  from space 10240K, 99% used [0x00000000eea00000,0x00000000ef3f8990,0x00000000ef400000)
+  to   space 10240K, 0% used [0x00000000f3300000,0x00000000f3300000,0x00000000f3d00000)
+ ParOldGen       total 171008K, used 4824K [0x00000000c0000000, 0x00000000ca700000, 0x00000000eab00000)
+  object space 171008K, 2% used [0x00000000c0000000,0x00000000c04b6018,0x00000000ca700000)
+ Metaspace       used 9736K, capacity 10126K, committed 10240K, reserved 1058816K
+  class space    used 1441K, capacity 1528K, committed 1536K, reserved 1048576K
+Event: 0.983 GC heap after
+Heap after GC invocations=2 (full 0):
+ PSYoungGen      total 139264K, used 10210K [0x00000000eab00000, 0x00000000f3d00000, 0x0000000100000000)
+  eden space 129024K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000f2900000)
+  from space 10240K, 99% used [0x00000000f3300000,0x00000000f3cf8980,0x00000000f3d00000)
+  to   space 10240K, 0% used [0x00000000f2900000,0x00000000f2900000,0x00000000f3300000)
+ ParOldGen       total 171008K, used 11192K [0x00000000c0000000, 0x00000000ca700000, 0x00000000eab00000)
+  object space 171008K, 6% used [0x00000000c0000000,0x00000000c0aee028,0x00000000ca700000)
+ Metaspace       used 9736K, capacity 10126K, committed 10240K, reserved 1058816K
+  class space    used 1441K, capacity 1528K, committed 1536K, reserved 1048576K
+}
+Event: 1.181 GC heap before
+{Heap before GC invocations=3 (full 0):
+ PSYoungGen      total 139264K, used 138448K [0x00000000eab00000, 0x00000000f3d00000, 0x0000000100000000)
+  eden space 129024K, 99% used [0x00000000eab00000,0x00000000f283b758,0x00000000f2900000)
+  from space 10240K, 99% used [0x00000000f3300000,0x00000000f3cf8980,0x00000000f3d00000)
+  to   space 10240K, 0% used [0x00000000f2900000,0x00000000f2900000,0x00000000f3300000)
+ ParOldGen       total 171008K, used 11192K [0x00000000c0000000, 0x00000000ca700000, 0x00000000eab00000)
+  object space 171008K, 6% used [0x00000000c0000000,0x00000000c0aee028,0x00000000ca700000)
+ Metaspace       used 9891K, capacity 10248K, committed 10368K, reserved 1058816K
+  class space    used 1484K, capacity 1566K, committed 1664K, reserved 1048576K
+Event: 1.212 GC heap after
+Heap after GC invocations=3 (full 0):
+ PSYoungGen      total 139264K, used 10213K [0x00000000eab00000, 0x00000000fbb00000, 0x0000000100000000)
+  eden space 129024K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000f2900000)
+  from space 10240K, 99% used [0x00000000f2900000,0x00000000f32f9578,0x00000000f3300000)
+  to   space 10240K, 0% used [0x00000000fb100000,0x00000000fb100000,0x00000000fbb00000)
+ ParOldGen       total 171008K, used 25520K [0x00000000c0000000, 0x00000000ca700000, 0x00000000eab00000)
+  object space 171008K, 14% used [0x00000000c0000000,0x00000000c18ec3d8,0x00000000ca700000)
+ Metaspace       used 9891K, capacity 10248K, committed 10368K, reserved 1058816K
+  class space    used 1484K, capacity 1566K, committed 1664K, reserved 1048576K
+}
+Event: 1.603 GC heap before
+{Heap before GC invocations=4 (full 0):
+ PSYoungGen      total 139264K, used 139237K [0x00000000eab00000, 0x00000000fbb00000, 0x0000000100000000)
+  eden space 129024K, 100% used [0x00000000eab00000,0x00000000f2900000,0x00000000f2900000)
+  from space 10240K, 99% used [0x00000000f2900000,0x00000000f32f9578,0x00000000f3300000)
+  to   space 10240K, 0% used [0x00000000fb100000,0x00000000fb100000,0x00000000fbb00000)
+ ParOldGen       total 171008K, used 25520K [0x00000000c0000000, 0x00000000ca700000, 0x00000000eab00000)
+  object space 171008K, 14% used [0x00000000c0000000,0x00000000c18ec3d8,0x00000000ca700000)
+ Metaspace       used 11649K, capacity 12200K, committed 12416K, reserved 1060864K
+  class space    used 1747K, capacity 1874K, committed 1920K, reserved 1048576K
+Event: 1.653 GC heap after
+Heap after GC invocations=4 (full 0):
+ PSYoungGen      total 268288K, used 10237K [0x00000000eab00000, 0x00000000fbb00000, 0x0000000100000000)
+  eden space 258048K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000fa700000)
+  from space 10240K, 99% used [0x00000000fb100000,0x00000000fbaff430,0x00000000fbb00000)
+  to   space 10240K, 0% used [0x00000000fa700000,0x00000000fa700000,0x00000000fb100000)
+ ParOldGen       total 171008K, used 47784K [0x00000000c0000000, 0x00000000ca700000, 0x00000000eab00000)
+  object space 171008K, 27% used [0x00000000c0000000,0x00000000c2eaa150,0x00000000ca700000)
+ Metaspace       used 11649K, capacity 12200K, committed 12416K, reserved 1060864K
+  class space    used 1747K, capacity 1874K, committed 1920K, reserved 1048576K
+}
+Event: 1.917 GC heap before
+{Heap before GC invocations=5 (full 0):
+ PSYoungGen      total 268288K, used 268285K [0x00000000eab00000, 0x00000000fbb00000, 0x0000000100000000)
+  eden space 258048K, 100% used [0x00000000eab00000,0x00000000fa700000,0x00000000fa700000)
+  from space 10240K, 99% used [0x00000000fb100000,0x00000000fbaff430,0x00000000fbb00000)
+  to   space 10240K, 0% used [0x00000000fa700000,0x00000000fa700000,0x00000000fb100000)
+ ParOldGen       total 171008K, used 47784K [0x00000000c0000000, 0x00000000ca700000, 0x00000000eab00000)
+  object space 171008K, 27% used [0x00000000c0000000,0x00000000c2eaa150,0x00000000ca700000)
+ Metaspace       used 11748K, capacity 12272K, committed 12416K, reserved 1060864K
+  class space    used 1779K, capacity 1877K, committed 1920K, reserved 1048576K
+Event: 1.984 GC heap after
+Heap after GC invocations=5 (full 0):
+ PSYoungGen      total 268288K, used 10233K [0x00000000eab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 258048K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000fa700000)
+  from space 10240K, 99% used [0x00000000fa700000,0x00000000fb0fe748,0x00000000fb100000)
+  to   space 41984K, 0% used [0x00000000fd700000,0x00000000fd700000,0x0000000100000000)
+ ParOldGen       total 171008K, used 73365K [0x00000000c0000000, 0x00000000ca700000, 0x00000000eab00000)
+  object space 171008K, 42% used [0x00000000c0000000,0x00000000c47a5648,0x00000000ca700000)
+ Metaspace       used 11748K, capacity 12272K, committed 12416K, reserved 1060864K
+  class space    used 1779K, capacity 1877K, committed 1920K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 2.081 Thread 0x00005638a25e0000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fe16ec111a4 method=java.lang.Integer.valueOf(I)Ljava/lang/Integer; @ 10
+Event: 2.081 Thread 0x00005638a25e0000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fe16ec0a7e4 method=java.lang.Integer.valueOf(I)Ljava/lang/Integer; @ 10
+Event: 2.137 Thread 0x00005638a25e0000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fe16ec79878 method=java.util.regex.Pattern$3.isSatisfiedBy(I)Z @ 19
+Event: 2.160 Thread 0x00005638a25e0000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fe16ec690fc method=scala.collection.immutable.Set$Set3.contains(Ljava/lang/Object;)Z @ 19
+Event: 2.193 Thread 0x00005638a25e0000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fe16e9fefcc method=scala.collection.TraversableLike.builder$1(Lscala/collection/generic/CanBuildFrom;)Lscala/collection/mutable/Builder; @ 7
+Event: 2.196 Thread 0x00005638a25e0000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fe16e9fefcc method=scala.collection.TraversableLike.builder$1(Lscala/collection/generic/CanBuildFrom;)Lscala/collection/mutable/Builder; @ 7
+Event: 2.196 Thread 0x00005638a25e0000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fe16e9fefcc method=scala.collection.TraversableLike.builder$1(Lscala/collection/generic/CanBuildFrom;)Lscala/collection/mutable/Builder; @ 7
+Event: 2.200 Thread 0x00005638a25e0000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fe16e9fefcc method=scala.collection.TraversableLike.builder$1(Lscala/collection/generic/CanBuildFrom;)Lscala/collection/mutable/Builder; @ 7
+Event: 2.264 Thread 0x00005638a25e0000 Uncommon trap: reason=speculate_class_check action=maybe_recompile pc=0x00007fe16ed24ba8 method=scala.Array$.copy(Ljava/lang/Object;ILjava/lang/Object;II)V @ 33
+Event: 2.264 Thread 0x00005638a25e0000 Uncommon trap: reason=speculate_class_check action=maybe_recompile pc=0x00007fe16ed24ba8 method=scala.Array$.copy(Ljava/lang/Object;ILjava/lang/Object;II)V @ 33
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 1.345 Thread 0x00005638a25e0000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$count$1$adapted(Lscala/Function1;Lscala/runtime/IntRef;Ljava/lang/Object;)Ljava/lang/Object;> (0x00000000ec2ca7e0) thrown at [/build/openjdk-8-pREaNj/openjdk-8-8u181-b13/src/hotspot/src
+Event: 1.442 Thread 0x00005638a25e0000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$sliding$1(Lscala/collection/IterableLike;Lscala/collection/Seq;)Ljava/lang/Object;> (0x00000000ee6d8128) thrown at [/build/openjdk-8-pREaNj/openjdk-8-8u181-b13/src/hotspot/src/share/vm/
+Event: 1.446 Thread 0x00005638a25e0000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$sum$1(Lscala/math/Numeric;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;> (0x00000000ee729cf8) thrown at [/build/openjdk-8-pREaNj/openjdk-8-8u181-b13/src/hotspot/src/share/vm/i
+Event: 1.465 Thread 0x00005638a25e0000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$distinct$1(Lscala/collection/mutable/Builder;Lscala/collection/mutable/HashSet;Ljava/lang/Object;)Ljava/lang/Object;> (0x00000000ee8a5c60) thrown at [/build/openjdk-8-pREaNj/openjdk-8-8
+Event: 1.487 Thread 0x00005638a25e0000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$filterImpl$1(Lscala/Function1;ZLscala/collection/mutable/Builder;Ljava/lang/Object;)Ljava/lang/Object;> (0x00000000ee9dfd88) thrown at [/build/openjdk-8-pREaNj/openjdk-8-8u181-b13/src/h
+Event: 1.517 Thread 0x00005638a25e0000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$releaseVersion$1$adapted(Ljava/lang/String;)Ljava/lang/Object;> (0x00000000eea57c60) thrown at [/build/openjdk-8-pREaNj/openjdk-8-8u181-b13/src/hotspot/src/share/vm/interpreter/linkReso
+Event: 1.518 Thread 0x00005638a25e0000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$releaseVersion$2(Ljava/lang/String;)Ljava/lang/String;> (0x00000000eea63860) thrown at [/build/openjdk-8-pREaNj/openjdk-8-8u181-b13/src/hotspot/src/share/vm/interpreter/linkResolver.cpp
+Event: 1.518 Thread 0x00005638a25e0000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$developmentVersion$1$adapted(Ljava/lang/String;)Ljava/lang/Object;> (0x00000000eea679f8) thrown at [/build/openjdk-8-pREaNj/openjdk-8-8u181-b13/src/hotspot/src/share/vm/interpreter/link
+Event: 1.518 Thread 0x00005638a25e0000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$developmentVersion$2(Lscala/util/PropertiesTrait;Ljava/lang/String;)Lscala/Option;> (0x00000000eea6b7c0) thrown at [/build/openjdk-8-pREaNj/openjdk-8-8u181-b13/src/hotspot/src/share/vm/
+Event: 2.195 Thread 0x00005638a25e0000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$addString$1(Lscala/collection/mutable/StringBuilder;Ljava/lang/String;Lscala/runtime/BooleanRef;Ljava/lang/Object;)Ljava/lang/Object;> (0x00000000eef23ce0) thrown at [/build/openjdk-8-p
+
+Events (10 events):
+Event: 4.047 Executing VM operation: EnableBiasedLocking done
+Event: 39.217 loading class sun/misc/Signal$1
+Event: 39.221 loading class sun/misc/Signal$1 done
+Event: 39.221 Thread 0x00007fe13c001000 Thread added: 0x00007fe13c001000
+Event: 39.221 loading class java/lang/Shutdown
+Event: 39.234 loading class java/lang/Shutdown done
+Event: 39.234 loading class java/lang/Shutdown$Lock
+Event: 39.234 loading class java/lang/Shutdown$Lock done
+Event: 39.235 Thread 0x00005638a376e800 Thread exited: 0x00005638a376e800
+Event: 39.235 Executing VM operation: Exit
+
+
+Dynamic libraries:
+10000000-10001000 rw-s 00000000 00:06 456                                /dev/nvidia0
+10001000-10002000 rw-s 00000000 00:06 456                                /dev/nvidia0
+10002000-10003000 rw-s 00000000 00:06 456                                /dev/nvidia0
+10003000-10004000 rw-s 00000000 00:06 456                                /dev/nvidia0
+10004000-10005000 rw-s 00000000 00:06 456                                /dev/nvidia0
+10005000-10006000 rw-s 00000000 00:06 456                                /dev/nvidia0
+10006000-10007000 rw-s 00000000 00:06 456                                /dev/nvidia0
+10007000-10008000 rw-s 00000000 00:06 456                                /dev/nvidia0
+10008000-10009000 rw-s 00000000 00:06 456                                /dev/nvidia0
+10009000-1000a000 rw-s 00000000 00:06 456                                /dev/nvidia0
+1000a000-1000b000 rw-s 00000000 00:06 456                                /dev/nvidia0
+1000b000-1000c000 rw-s 00000000 00:06 456                                /dev/nvidia0
+1000c000-1000d000 rw-s 00000000 00:06 456                                /dev/nvidia0
+1000d000-1000e000 rw-s 00000000 00:06 456                                /dev/nvidia0
+1000e000-1000f000 rw-s 00000000 00:06 456                                /dev/nvidia0
+1000f000-10010000 rw-s 00000000 00:06 456                                /dev/nvidia0
+10010000-20000000 ---p 00000000 00:00 0 
+c0000000-ca700000 rw-p 00000000 00:00 0 
+ca700000-eab00000 ---p 00000000 00:00 0 
+eab00000-100000000 rw-p 00000000 00:00 0 
+100000000-1001e0000 rw-p 00000000 00:00 0 
+1001e0000-140000000 ---p 00000000 00:00 0 
+200000000-200200000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+200200000-200400000 ---p 00000000 00:00 0 
+200400000-200404000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+200404000-200600000 ---p 00000000 00:00 0 
+200600000-200a00000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+200a00000-201600000 ---p 00000000 00:00 0 
+201600000-201604000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+201604000-201800000 ---p 00000000 00:00 0 
+201800000-201c00000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+201c00000-202800000 ---p 00000000 00:00 0 
+202800000-202804000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+202804000-202a00000 ---p 00000000 00:00 0 
+202a00000-202e00000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+202e00000-203a00000 ---p 00000000 00:00 0 
+203a00000-203a04000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+203a04000-203c00000 ---p 00000000 00:00 0 
+203c00000-204000000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+204000000-204c00000 ---p 00000000 00:00 0 
+204c00000-204c04000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+204c04000-204e00000 ---p 00000000 00:00 0 
+204e00000-205200000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+205200000-205e00000 ---p 00000000 00:00 0 
+205e00000-205e04000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+205e04000-206000000 ---p 00000000 00:00 0 
+206000000-206400000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+206400000-207000000 ---p 00000000 00:00 0 
+207000000-207004000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+207004000-207200000 ---p 00000000 00:00 0 
+207200000-207600000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+207600000-208200000 ---p 00000000 00:00 0 
+208200000-208204000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+208204000-208400000 ---p 00000000 00:00 0 
+208400000-208800000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+208800000-209400000 ---p 00000000 00:00 0 
+209400000-209404000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+209404000-209600000 ---p 00000000 00:00 0 
+209600000-209a00000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+209a00000-209a04000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+209a04000-209c00000 ---p 00000000 00:00 0 
+209c00000-20a000000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+20a000000-20a004000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+20a004000-20a200000 ---p 00000000 00:00 0 
+20a200000-20a600000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+20a600000-20a604000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+20a604000-20a800000 ---p 00000000 00:00 0 
+20a800000-20ac00000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+20ac00000-20ac04000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+20ac04000-20ae00000 ---p 00000000 00:00 0 
+20ae00000-20b200000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+20b200000-20b204000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+20b204000-20b400000 ---p 00000000 00:00 0 
+20b400000-20b800000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+20b800000-20b804000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+20b804000-20ba00000 ---p 00000000 00:00 0 
+20ba00000-20be00000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+20be00000-20be04000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+20be04000-20c000000 ---p 00000000 00:00 0 
+20c000000-20c400000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+20c400000-20c600000 ---p 00000000 00:00 0 
+20c600000-20c800000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+20c800000-20ca00000 rw-s 00000000 00:06 455                              /dev/nvidiactl
+20ca00000-300200000 ---p 00000000 00:00 0 
+10000000000-10204400000 ---p 00000000 00:00 0 
+10204400000-10204600000 rw-s 00000000 00:05 79304                        /dev/zero (deleted)
+10204600000-10204800000 rw-s 00000000 00:06 455                          /dev/nvidiactl
+10204800000-10204a00000 rw-s 00000000 00:05 79305                        /dev/zero (deleted)
+10204a00000-10204c00000 rw-s 00000000 00:06 455                          /dev/nvidiactl
+10204c00000-10204ed6000 rw-s 00000000 00:06 455                          /dev/nvidiactl
+10204ed6000-10482a00000 ---p 00000000 00:00 0 
+10482a00000-10482c00000 rw-s 00000000 00:05 79307                        /dev/zero (deleted)
+10482c00000-10483400000 rw-s 00000000 00:05 76398                        /dev/zero (deleted)
+10483400000-10484400000 rw-s 00000000 00:05 76399                        /dev/zero (deleted)
+10484400000-10484800000 ---p 00000000 00:00 0 
+56389ec8d000-56389ef37000 r-xp 00000000 08:06 42738707                   /home/ckg/anaconda3/envs/tensorflow/bin/python3.5
+56389f137000-56389f139000 r--p 002aa000 08:06 42738707                   /home/ckg/anaconda3/envs/tensorflow/bin/python3.5
+56389f139000-56389f19b000 rw-p 002ac000 08:06 42738707                   /home/ckg/anaconda3/envs/tensorflow/bin/python3.5
+56389f19b000-56389f1cb000 rw-p 00000000 00:00 0 
+56389f9df000-5638be9f5000 rw-p 00000000 00:00 0                          [heap]
+7fe0c8000000-7fe0c81eb000 rw-p 00000000 00:00 0 
+7fe0c81eb000-7fe0cc000000 ---p 00000000 00:00 0 
+7fe0cc000000-7fe0cc021000 rw-p 00000000 00:00 0 
+7fe0cc021000-7fe0d0000000 ---p 00000000 00:00 0 
+7fe0d0000000-7fe0d01d1000 rw-p 00000000 00:00 0 
+7fe0d01d1000-7fe0d4000000 ---p 00000000 00:00 0 
+7fe0d8000000-7fe0d819c000 rw-p 00000000 00:00 0 
+7fe0d819c000-7fe0dc000000 ---p 00000000 00:00 0 
+7fe0dc598000-7fe0f0000000 rw-p 00000000 00:00 0 
+7fe0f0000000-7fe0f0021000 rw-p 00000000 00:00 0 
+7fe0f0021000-7fe0f4000000 ---p 00000000 00:00 0 
+7fe0f4000000-7fe0f419b000 rw-p 00000000 00:00 0 
+7fe0f419b000-7fe0f8000000 ---p 00000000 00:00 0 
+7fe0f8000000-7fe0f8021000 rw-p 00000000 00:00 0 
+7fe0f8021000-7fe0fc000000 ---p 00000000 00:00 0 
+7fe0fc000000-7fe0fc021000 rw-p 00000000 00:00 0 
+7fe0fc021000-7fe100000000 ---p 00000000 00:00 0 
+7fe100000000-7fe100021000 rw-p 00000000 00:00 0 
+7fe100021000-7fe104000000 ---p 00000000 00:00 0 
+7fe106000000-7fe10c000000 ---p 00000000 00:00 0 
+7fe10c000000-7fe10c021000 rw-p 00000000 00:00 0 
+7fe10c021000-7fe110000000 ---p 00000000 00:00 0 
+7fe110000000-7fe110021000 rw-p 00000000 00:00 0 
+7fe110021000-7fe114000000 ---p 00000000 00:00 0 
+7fe114000000-7fe114021000 rw-p 00000000 00:00 0 
+7fe114021000-7fe118000000 ---p 00000000 00:00 0 
+7fe119a00000-7fe11c021000 rw-p 00000000 00:00 0 
+7fe11c021000-7fe120000000 ---p 00000000 00:00 0 
+7fe120000000-7fe120021000 rw-p 00000000 00:00 0 
+7fe120021000-7fe124000000 ---p 00000000 00:00 0 
+7fe124000000-7fe124021000 rw-p 00000000 00:00 0 
+7fe124021000-7fe128000000 ---p 00000000 00:00 0 
+7fe128000000-7fe128021000 rw-p 00000000 00:00 0 
+7fe128021000-7fe12c000000 ---p 00000000 00:00 0 
+7fe12c000000-7fe12c021000 rw-p 00000000 00:00 0 
+7fe12c021000-7fe130000000 ---p 00000000 00:00 0 
+7fe130000000-7fe130021000 rw-p 00000000 00:00 0 
+7fe130021000-7fe134000000 ---p 00000000 00:00 0 
+7fe134000000-7fe134414000 rw-p 00000000 00:00 0 
+7fe134414000-7fe138000000 ---p 00000000 00:00 0 
+7fe138000000-7fe138493000 rw-p 00000000 00:00 0 
+7fe138493000-7fe13c000000 ---p 00000000 00:00 0 
+7fe13c000000-7fe13c021000 rw-p 00000000 00:00 0 
+7fe13c021000-7fe140000000 ---p 00000000 00:00 0 
+7fe140000000-7fe140c78000 rw-p 00000000 00:00 0 
+7fe140c78000-7fe144000000 ---p 00000000 00:00 0 
+7fe144000000-7fe144021000 rw-p 00000000 00:00 0 
+7fe144021000-7fe148000000 ---p 00000000 00:00 0 
+7fe148000000-7fe148021000 rw-p 00000000 00:00 0 
+7fe148021000-7fe14c000000 ---p 00000000 00:00 0 
+7fe14c000000-7fe14c021000 rw-p 00000000 00:00 0 
+7fe14c021000-7fe150000000 ---p 00000000 00:00 0 
+7fe150000000-7fe150021000 rw-p 00000000 00:00 0 
+7fe150021000-7fe154000000 ---p 00000000 00:00 0 
+7fe154000000-7fe154021000 rw-p 00000000 00:00 0 
+7fe154021000-7fe158000000 ---p 00000000 00:00 0 
+7fe158000000-7fe158e00000 rw-p 00000000 00:00 0 
+7fe158fba000-7fe158ffa000 rw-p 00000000 00:00 0 
+7fe158ffa000-7fe158ffb000 ---p 00000000 00:00 0 
+7fe158ffb000-7fe1597fb000 rw-p 00000000 00:00 0 
+7fe1597fb000-7fe1597fc000 ---p 00000000 00:00 0 
+7fe1597fc000-7fe159ffc000 rw-p 00000000 00:00 0 
+7fe159ffc000-7fe159ffd000 ---p 00000000 00:00 0 
+7fe159ffd000-7fe15a7fd000 rw-p 00000000 00:00 0 
+7fe15a7fd000-7fe15a7fe000 ---p 00000000 00:00 0 
+7fe15a7fe000-7fe15affe000 rw-p 00000000 00:00 0 
+7fe15affe000-7fe15afff000 ---p 00000000 00:00 0 
+7fe15afff000-7fe15b7ff000 rw-p 00000000 00:00 0 
+7fe15b7ff000-7fe15b800000 ---p 00000000 00:00 0 
+7fe15b800000-7fe15c000000 rw-p 00000000 00:00 0 
+7fe15c000000-7fe15c021000 rw-p 00000000 00:00 0 
+7fe15c021000-7fe160000000 ---p 00000000 00:00 0 
+7fe160000000-7fe160600000 rw-p 00000000 00:00 0 
+7fe160603000-7fe1606c3000 rw-p 00000000 00:00 0 
+7fe1606c3000-7fe1606c6000 ---p 00000000 00:00 0 
+7fe1606c6000-7fe1607c4000 rw-p 00000000 00:00 0 
+7fe1607c4000-7fe1607c5000 ---p 00000000 00:00 0 
+7fe1607c5000-7fe160fc5000 rw-p 00000000 00:00 0 
+7fe160fc5000-7fe160fc6000 ---p 00000000 00:00 0 
+7fe160fc6000-7fe1617c6000 rw-p 00000000 00:00 0 
+7fe1617c6000-7fe1617c7000 ---p 00000000 00:00 0 
+7fe1617c7000-7fe161fc7000 rw-p 00000000 00:00 0 
+7fe161fc7000-7fe161fc8000 ---p 00000000 00:00 0 
+7fe161fc8000-7fe1627c8000 rw-p 00000000 00:00 0 
+7fe1627c8000-7fe1627c9000 ---p 00000000 00:00 0 
+7fe1627c9000-7fe162fc9000 rw-p 00000000 00:00 0 
+7fe162fc9000-7fe162fca000 ---p 00000000 00:00 0 
+7fe162fca000-7fe1639ca000 rw-p 00000000 00:00 0 
+7fe163a00000-7fe163c00000 rw-p 00000000 00:00 0 
+7fe163c00000-7fe164000000 rw-p 00000000 00:00 0 
+7fe164000000-7fe164051000 rw-p 00000000 00:00 0 
+7fe164051000-7fe168000000 ---p 00000000 00:00 0 
+7fe168000000-7fe168200000 rw-p 00000000 00:00 0 
+7fe168200000-7fe168400000 rw-p 00000000 00:00 0 
+7fe16843f000-7fe1684ff000 rw-p 00000000 00:00 0 
+7fe1684ff000-7fe168500000 ---p 00000000 00:00 0 
+7fe168500000-7fe169e00000 rw-p 00000000 00:00 0 
+7fe169e00000-7fe16a000000 rw-p 00000000 00:00 0 
+7fe16a015000-7fe16a016000 rw-s 00000000 00:06 455                        /dev/nvidiactl
+7fe16a016000-7fe16a017000 rw-s 00000000 00:06 455                        /dev/nvidiactl
+7fe16a017000-7fe16a018000 rw-s 00000000 00:06 455                        /dev/nvidiactl
+7fe16a018000-7fe16a019000 rw-s 00000000 00:06 455                        /dev/nvidiactl
+7fe16a019000-7fe16a01a000 rw-s 00000000 00:06 455                        /dev/nvidiactl
+7fe16a01a000-7fe16a01b000 rw-s 00000000 00:06 455                        /dev/nvidiactl
+7fe16a01b000-7fe16a01c000 rw-s 00000000 00:06 455                        /dev/nvidiactl
+7fe16a01c000-7fe16a01d000 rw-s 00000000 00:06 455                        /dev/nvidiactl
+7fe16a01d000-7fe16a01e000 rw-s 00000000 00:06 455                        /dev/nvidiactl
+7fe16a01e000-7fe16a01f000 rw-s 00000000 00:06 455                        /dev/nvidiactl
+7fe16a01f000-7fe16a21f000 rw-p 00000000 00:00 0 
+7fe16a21f000-7fe16a35f000 ---p 00000000 00:00 0 
+7fe16a35f000-7fe16a59f000 rw-p 00000000 00:00 0 
+7fe16a59f000-7fe16a5d6000 r--s 004ca000 08:06 43389064                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/scala-library-2.12.3.jar
+7fe16a5d6000-7fe16a5f1000 r--s 00394000 08:01 1461747                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar
+7fe16a5f1000-7fe16a5f4000 ---p 00000000 00:00 0 
+7fe16a5f4000-7fe16a6f2000 rw-p 00000000 00:00 0 
+7fe16a6f2000-7fe16a6f3000 ---p 00000000 00:00 0 
+7fe16a6f3000-7fe16a7f3000 rw-p 00000000 00:00 0 
+7fe16a7f3000-7fe16a7f6000 ---p 00000000 00:00 0 
+7fe16a7f6000-7fe16a8f4000 rw-p 00000000 00:00 0 
+7fe16a8f4000-7fe16a8f7000 ---p 00000000 00:00 0 
+7fe16a8f7000-7fe16a9f5000 rw-p 00000000 00:00 0 
+7fe16a9f5000-7fe16a9f8000 ---p 00000000 00:00 0 
+7fe16a9f8000-7fe16aaf6000 rw-p 00000000 00:00 0 
+7fe16aaf6000-7fe16aaf9000 ---p 00000000 00:00 0 
+7fe16aaf9000-7fe16abf7000 rw-p 00000000 00:00 0 
+7fe16abf7000-7fe16abfa000 ---p 00000000 00:00 0 
+7fe16abfa000-7fe16acf8000 rw-p 00000000 00:00 0 
+7fe16acf8000-7fe16acfb000 ---p 00000000 00:00 0 
+7fe16acfb000-7fe16adf9000 rw-p 00000000 00:00 0 
+7fe16adf9000-7fe16adfc000 ---p 00000000 00:00 0 
+7fe16adfc000-7fe16aefa000 rw-p 00000000 00:00 0 
+7fe16aefa000-7fe16aefb000 ---p 00000000 00:00 0 
+7fe16aefb000-7fe16affb000 rw-p 00000000 00:00 0 
+7fe16affb000-7fe16b1ca000 r--s 03c32000 08:01 1456613                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
+7fe16b1ca000-7fe16d9ca000 rw-p 00000000 00:00 0 
+7fe16d9ca000-7fe16d9cb000 ---p 00000000 00:00 0 
+7fe16d9cb000-7fe16dacb000 rw-p 00000000 00:00 0 
+7fe16dacb000-7fe16dacc000 ---p 00000000 00:00 0 
+7fe16dacc000-7fe16dbcc000 rw-p 00000000 00:00 0 
+7fe16dbcc000-7fe16dbcd000 ---p 00000000 00:00 0 
+7fe16dbcd000-7fe16dccd000 rw-p 00000000 00:00 0 
+7fe16dccd000-7fe16dcce000 ---p 00000000 00:00 0 
+7fe16dcce000-7fe16de22000 rw-p 00000000 00:00 0 
+7fe16de22000-7fe16df24000 ---p 00000000 00:00 0 
+7fe16df24000-7fe16df78000 rw-p 00000000 00:00 0 
+7fe16df78000-7fe16e079000 ---p 00000000 00:00 0 
+7fe16e079000-7fe16e124000 rw-p 00000000 00:00 0 
+7fe16e124000-7fe16e147000 rw-p 00000000 00:00 0 
+7fe16e147000-7fe16e4e5000 ---p 00000000 00:00 0 
+7fe16e4e5000-7fe16ed55000 rwxp 00000000 00:00 0 
+7fe16ed55000-7fe17d4e5000 ---p 00000000 00:00 0 
+7fe17d4e5000-7fe17d4ed000 r-xp 00000000 08:01 1606569                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7fe17d4ed000-7fe17d6ec000 ---p 00008000 08:01 1606569                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7fe17d6ec000-7fe17d6ed000 r--p 00007000 08:01 1606569                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7fe17d6ed000-7fe17d6ee000 rw-p 00008000 08:01 1606569                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7fe17d6ee000-7fe17d6f9000 r-xp 00000000 08:01 1975438                    /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7fe17d6f9000-7fe17d8f8000 ---p 0000b000 08:01 1975438                    /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7fe17d8f8000-7fe17d8f9000 r--p 0000a000 08:01 1975438                    /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7fe17d8f9000-7fe17d8fa000 rw-p 0000b000 08:01 1975438                    /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7fe17d8fa000-7fe17d900000 rw-p 00000000 00:00 0 
+7fe17d900000-7fe17d90b000 r-xp 00000000 08:01 1975448                    /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7fe17d90b000-7fe17db0a000 ---p 0000b000 08:01 1975448                    /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7fe17db0a000-7fe17db0b000 r--p 0000a000 08:01 1975448                    /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7fe17db0b000-7fe17db0c000 rw-p 0000b000 08:01 1975448                    /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7fe17db0c000-7fe17db22000 r-xp 00000000 08:01 1975432                    /lib/x86_64-linux-gnu/libnsl-2.23.so
+7fe17db22000-7fe17dd21000 ---p 00016000 08:01 1975432                    /lib/x86_64-linux-gnu/libnsl-2.23.so
+7fe17dd21000-7fe17dd22000 r--p 00015000 08:01 1975432                    /lib/x86_64-linux-gnu/libnsl-2.23.so
+7fe17dd22000-7fe17dd23000 rw-p 00016000 08:01 1975432                    /lib/x86_64-linux-gnu/libnsl-2.23.so
+7fe17dd23000-7fe17dd25000 rw-p 00000000 00:00 0 
+7fe17dd25000-7fe17dd2d000 r-xp 00000000 08:01 1975434                    /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7fe17dd2d000-7fe17df2c000 ---p 00008000 08:01 1975434                    /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7fe17df2c000-7fe17df2d000 r--p 00007000 08:01 1975434                    /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7fe17df2d000-7fe17df2e000 rw-p 00008000 08:01 1975434                    /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7fe17df2e000-7fe17df5b000 r-xp 00000000 08:01 1606585                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7fe17df5b000-7fe17e15a000 ---p 0002d000 08:01 1606585                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7fe17e15a000-7fe17e15b000 r--p 0002c000 08:01 1606585                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7fe17e15b000-7fe17e15d000 rw-p 0002d000 08:01 1606585                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7fe17e15d000-7fe17e16c000 r-xp 00000000 08:01 1606573                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7fe17e16c000-7fe17e36b000 ---p 0000f000 08:01 1606573                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7fe17e36b000-7fe17e36d000 r--p 0000e000 08:01 1606573                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7fe17e36d000-7fe17e36e000 rw-p 00010000 08:01 1606573                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7fe17e36e000-7fe17efcb000 r-xp 00000000 08:01 1711741                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7fe17efcb000-7fe17f1cb000 ---p 00c5d000 08:01 1711741                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7fe17f1cb000-7fe17f25f000 r--p 00c5d000 08:01 1711741                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7fe17f25f000-7fe17f288000 rw-p 00cf1000 08:01 1711741                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7fe17f288000-7fe17f2f8000 rw-p 00000000 00:00 0 
+7fe17f2f8000-7fe17f378000 r-xp 00000000 08:06 42863033                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/_jpype.cpython-35m-x86_64-linux-gnu.so
+7fe17f378000-7fe17f577000 ---p 00080000 08:06 42863033                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/_jpype.cpython-35m-x86_64-linux-gnu.so
+7fe17f577000-7fe17f579000 r--p 0007f000 08:06 42863033                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/_jpype.cpython-35m-x86_64-linux-gnu.so
+7fe17f579000-7fe17f57d000 rw-p 00081000 08:06 42863033                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/_jpype.cpython-35m-x86_64-linux-gnu.so
+7fe17f57d000-7fe17f77d000 rw-p 00000000 00:00 0 
+7fe17f77d000-7fe17f78f000 r-xp 00000000 08:06 46535378                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/testing.cpython-35m-x86_64-linux-gnu.so
+7fe17f78f000-7fe17f98e000 ---p 00012000 08:06 46535378                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/testing.cpython-35m-x86_64-linux-gnu.so
+7fe17f98e000-7fe17f990000 rw-p 00011000 08:06 46535378                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/testing.cpython-35m-x86_64-linux-gnu.so
+7fe17f990000-7fe17f991000 r-xp 00000000 08:06 46535426                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/util/_move.cpython-35m-x86_64-linux-gnu.so
+7fe17f991000-7fe17fb91000 ---p 00001000 08:06 46535426                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/util/_move.cpython-35m-x86_64-linux-gnu.so
+7fe17fb91000-7fe17fb92000 rw-p 00001000 08:06 46535426                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/util/_move.cpython-35m-x86_64-linux-gnu.so
+7fe17fb92000-7fe17fba8000 r-xp 00000000 08:06 46534196                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/io/msgpack/_unpacker.cpython-35m-x86_64-linux-gnu.so
+7fe17fba8000-7fe17fda7000 ---p 00016000 08:06 46534196                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/io/msgpack/_unpacker.cpython-35m-x86_64-linux-gnu.so
+7fe17fda7000-7fe17fdaa000 rw-p 00015000 08:06 46534196                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/io/msgpack/_unpacker.cpython-35m-x86_64-linux-gnu.so
+7fe17fdaa000-7fe17fdbb000 r-xp 00000000 08:06 46534199                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/io/msgpack/_packer.cpython-35m-x86_64-linux-gnu.so
+7fe17fdbb000-7fe17ffba000 ---p 00011000 08:06 46534199                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/io/msgpack/_packer.cpython-35m-x86_64-linux-gnu.so
+7fe17ffba000-7fe17ffbc000 rw-p 00010000 08:06 46534199                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/io/msgpack/_packer.cpython-35m-x86_64-linux-gnu.so
+7fe17ffbc000-7fe18003c000 rw-p 00000000 00:00 0 
+7fe18003c000-7fe18006f000 r-xp 00000000 08:06 46535368                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/writers.cpython-35m-x86_64-linux-gnu.so
+7fe18006f000-7fe18026f000 ---p 00033000 08:06 46535368                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/writers.cpython-35m-x86_64-linux-gnu.so
+7fe18026f000-7fe180273000 rw-p 00033000 08:06 46535368                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/writers.cpython-35m-x86_64-linux-gnu.so
+7fe180273000-7fe180334000 rw-p 00000000 00:00 0 
+7fe180334000-7fe180349000 r-xp 00000000 08:06 46535367                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/json.cpython-35m-x86_64-linux-gnu.so
+7fe180349000-7fe180549000 ---p 00015000 08:06 46535367                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/json.cpython-35m-x86_64-linux-gnu.so
+7fe180549000-7fe18054a000 rw-p 00015000 08:06 46535367                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/json.cpython-35m-x86_64-linux-gnu.so
+7fe18054a000-7fe1805ce000 r-xp 00000000 08:06 46535372                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/parsers.cpython-35m-x86_64-linux-gnu.so
+7fe1805ce000-7fe1807cd000 ---p 00084000 08:06 46535372                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/parsers.cpython-35m-x86_64-linux-gnu.so
+7fe1807cd000-7fe1807d4000 rw-p 00083000 08:06 46535372                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/parsers.cpython-35m-x86_64-linux-gnu.so
+7fe1807d4000-7fe180856000 rw-p 00000000 00:00 0 
+7fe180856000-7fe18086e000 r-xp 00000000 08:06 46535387                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/reshape.cpython-35m-x86_64-linux-gnu.so
+7fe18086e000-7fe180a6e000 ---p 00018000 08:06 46535387                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/reshape.cpython-35m-x86_64-linux-gnu.so
+7fe180a6e000-7fe180a71000 rw-p 00018000 08:06 46535387                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/reshape.cpython-35m-x86_64-linux-gnu.so
+7fe180a71000-7fe180ab1000 rw-p 00000000 00:00 0 
+7fe180ab1000-7fe180b5e000 r-xp 00000000 08:06 46535382                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/groupby.cpython-35m-x86_64-linux-gnu.so
+7fe180b5e000-7fe180d5d000 ---p 000ad000 08:06 46535382                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/groupby.cpython-35m-x86_64-linux-gnu.so
+7fe180d5d000-7fe180d66000 rw-p 000ac000 08:06 46535382                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/groupby.cpython-35m-x86_64-linux-gnu.so
+7fe180d66000-7fe180d67000 rw-p 00000000 00:00 0 
+7fe180d67000-7fe180da6000 r-xp 00000000 08:06 46535385                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/reduction.cpython-35m-x86_64-linux-gnu.so
+7fe180da6000-7fe180fa6000 ---p 0003f000 08:06 46535385                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/reduction.cpython-35m-x86_64-linux-gnu.so
+7fe180fa6000-7fe180faa000 rw-p 0003f000 08:06 46535385                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/reduction.cpython-35m-x86_64-linux-gnu.so
+7fe180faa000-7fe180fea000 rw-p 00000000 00:00 0 
+7fe180fea000-7fe180fff000 r-xp 00000000 08:06 46535389                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/skiplist.cpython-35m-x86_64-linux-gnu.so
+7fe180fff000-7fe1811ff000 ---p 00015000 08:06 46535389                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/skiplist.cpython-35m-x86_64-linux-gnu.so
+7fe1811ff000-7fe181201000 rw-p 00015000 08:06 46535389                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/skiplist.cpython-35m-x86_64-linux-gnu.so
+7fe181201000-7fe1812a6000 r-xp 00000000 08:06 46535381                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/window.cpython-35m-x86_64-linux-gnu.so
+7fe1812a6000-7fe1814a6000 ---p 000a5000 08:06 46535381                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/window.cpython-35m-x86_64-linux-gnu.so
+7fe1814a6000-7fe1814ae000 rw-p 000a5000 08:06 46535381                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/window.cpython-35m-x86_64-linux-gnu.so
+7fe1814ae000-7fe1814ef000 rw-p 00000000 00:00 0 
+7fe1814ef000-7fe18151d000 r-xp 00000000 08:06 43387782                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/matplotlib/_path.cpython-35m-x86_64-linux-gnu.so
+7fe18151d000-7fe18171c000 ---p 0002e000 08:06 43387782                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/matplotlib/_path.cpython-35m-x86_64-linux-gnu.so
+7fe18171c000-7fe18171e000 rw-p 0002d000 08:06 43387782                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/matplotlib/_path.cpython-35m-x86_64-linux-gnu.so
+7fe18171e000-7fe181a1e000 rw-p 00000000 00:00 0 
+7fe181a1e000-7fe181a24000 r-xp 00000000 08:06 42735610                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/mmap.cpython-35m-x86_64-linux-gnu.so
+7fe181a24000-7fe181c23000 ---p 00006000 08:06 42735610                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/mmap.cpython-35m-x86_64-linux-gnu.so
+7fe181c23000-7fe181c24000 r--p 00005000 08:06 42735610                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/mmap.cpython-35m-x86_64-linux-gnu.so
+7fe181c24000-7fe181c25000 rw-p 00006000 08:06 42735610                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/mmap.cpython-35m-x86_64-linux-gnu.so
+7fe181c25000-7fe181c65000 rw-p 00000000 00:00 0 
+7fe181c65000-7fe181d49000 r-xp 00000000 08:06 46535376                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/sparse.cpython-35m-x86_64-linux-gnu.so
+7fe181d49000-7fe181f49000 ---p 000e4000 08:06 46535376                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/sparse.cpython-35m-x86_64-linux-gnu.so
+7fe181f49000-7fe181f4e000 rw-p 000e4000 08:06 46535376                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/sparse.cpython-35m-x86_64-linux-gnu.so
+7fe181f4e000-7fe181f4f000 rw-p 00000000 00:00 0 
+7fe181f4f000-7fe181f8d000 r-xp 00000000 08:06 46535388                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/internals.cpython-35m-x86_64-linux-gnu.so
+7fe181f8d000-7fe18218c000 ---p 0003e000 08:06 46535388                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/internals.cpython-35m-x86_64-linux-gnu.so
+7fe18218c000-7fe182191000 rw-p 0003d000 08:06 46535388                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/internals.cpython-35m-x86_64-linux-gnu.so
+7fe182191000-7fe182212000 rw-p 00000000 00:00 0 
+7fe182212000-7fe18221b000 r-xp 00000000 08:06 46535380                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/indexing.cpython-35m-x86_64-linux-gnu.so
+7fe18221b000-7fe18241a000 ---p 00009000 08:06 46535380                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/indexing.cpython-35m-x86_64-linux-gnu.so
+7fe18241a000-7fe18241b000 rw-p 00008000 08:06 46535380                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/indexing.cpython-35m-x86_64-linux-gnu.so
+7fe18241b000-7fe18251c000 rw-p 00000000 00:00 0 
+7fe18251c000-7fe182720000 r-xp 00000000 08:06 46535383                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/interval.cpython-35m-x86_64-linux-gnu.so
+7fe182720000-7fe182920000 ---p 00204000 08:06 46535383                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/interval.cpython-35m-x86_64-linux-gnu.so
+7fe182920000-7fe18292f000 rw-p 00204000 08:06 46535383                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/interval.cpython-35m-x86_64-linux-gnu.so
+7fe18292f000-7fe1829f2000 rw-p 00000000 00:00 0 
+7fe1829f2000-7fe182a09000 r-xp 00000000 08:06 46535371                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/ops.cpython-35m-x86_64-linux-gnu.so
+7fe182a09000-7fe182c08000 ---p 00017000 08:06 46535371                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/ops.cpython-35m-x86_64-linux-gnu.so
+7fe182c08000-7fe182c0b000 rw-p 00016000 08:06 46535371                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/ops.cpython-35m-x86_64-linux-gnu.so
+7fe182c0b000-7fe182e17000 r-xp 00000000 08:06 46535366                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/join.cpython-35m-x86_64-linux-gnu.so
+7fe182e17000-7fe183017000 ---p 0020c000 08:06 46535366                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/join.cpython-35m-x86_64-linux-gnu.so
+7fe183017000-7fe183020000 rw-p 0020c000 08:06 46535366                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/join.cpython-35m-x86_64-linux-gnu.so
+7fe183020000-7fe183022000 rw-p 00000000 00:00 0 
+7fe183022000-7fe183079000 r-xp 00000000 08:06 46535395                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/offsets.cpython-35m-x86_64-linux-gnu.so
+7fe183079000-7fe183279000 ---p 00057000 08:06 46535395                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/offsets.cpython-35m-x86_64-linux-gnu.so
+7fe183279000-7fe183281000 rw-p 00057000 08:06 46535395                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/offsets.cpython-35m-x86_64-linux-gnu.so
+7fe183281000-7fe1832c2000 rw-p 00000000 00:00 0 
+7fe1832c2000-7fe183304000 r-xp 00000000 08:06 46535398                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/resolution.cpython-35m-x86_64-linux-gnu.so
+7fe183304000-7fe183504000 ---p 00042000 08:06 46535398                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/resolution.cpython-35m-x86_64-linux-gnu.so
+7fe183504000-7fe183509000 rw-p 00042000 08:06 46535398                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/resolution.cpython-35m-x86_64-linux-gnu.so
+7fe183509000-7fe18350a000 rw-p 00000000 00:00 0 
+7fe18350a000-7fe183528000 r-xp 00000000 08:06 46535400                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/frequencies.cpython-35m-x86_64-linux-gnu.so
+7fe183528000-7fe183728000 ---p 0001e000 08:06 46535400                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/frequencies.cpython-35m-x86_64-linux-gnu.so
+7fe183728000-7fe18372b000 rw-p 0001e000 08:06 46535400                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/frequencies.cpython-35m-x86_64-linux-gnu.so
+7fe18372b000-7fe18372c000 rw-p 00000000 00:00 0 
+7fe18372c000-7fe183782000 r-xp 00000000 08:06 46535404                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/period.cpython-35m-x86_64-linux-gnu.so
+7fe183782000-7fe183982000 ---p 00056000 08:06 46535404                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/period.cpython-35m-x86_64-linux-gnu.so
+7fe183982000-7fe183989000 rw-p 00056000 08:06 46535404                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/period.cpython-35m-x86_64-linux-gnu.so
+7fe183989000-7fe1839ca000 rw-p 00000000 00:00 0 
+7fe1839ca000-7fe183a49000 r-xp 00000000 08:06 46535379                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/index.cpython-35m-x86_64-linux-gnu.so
+7fe183a49000-7fe183c48000 ---p 0007f000 08:06 46535379                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/index.cpython-35m-x86_64-linux-gnu.so
+7fe183c48000-7fe183c4f000 rw-p 0007e000 08:06 46535379                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/index.cpython-35m-x86_64-linux-gnu.so
+7fe183c4f000-7fe183cd1000 rw-p 00000000 00:00 0 
+7fe183cd1000-7fe183cde000 r-xp 00000000 08:06 46535369                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/hashing.cpython-35m-x86_64-linux-gnu.so
+7fe183cde000-7fe183edd000 ---p 0000d000 08:06 46535369                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/hashing.cpython-35m-x86_64-linux-gnu.so
+7fe183edd000-7fe183edf000 rw-p 0000c000 08:06 46535369                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/hashing.cpython-35m-x86_64-linux-gnu.so
+7fe183edf000-7fe183eed000 r-xp 00000000 08:06 46535370                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/properties.cpython-35m-x86_64-linux-gnu.so
+7fe183eed000-7fe1840ec000 ---p 0000e000 08:06 46535370                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/properties.cpython-35m-x86_64-linux-gnu.so
+7fe1840ec000-7fe1840ee000 rw-p 0000d000 08:06 46535370                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/properties.cpython-35m-x86_64-linux-gnu.so
+7fe1840ee000-7fe18423d000 r-xp 00000000 08:06 46535384                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/algos.cpython-35m-x86_64-linux-gnu.so
+7fe18423d000-7fe18443c000 ---p 0014f000 08:06 46535384                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/algos.cpython-35m-x86_64-linux-gnu.so
+7fe18443c000-7fe184449000 rw-p 0014e000 08:06 46535384                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/algos.cpython-35m-x86_64-linux-gnu.so
+7fe184449000-7fe18444c000 rw-p 00000000 00:00 0 
+7fe18444c000-7fe1844d0000 r-xp 00000000 08:06 46535377                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/lib.cpython-35m-x86_64-linux-gnu.so
+7fe1844d0000-7fe1846d0000 ---p 00084000 08:06 46535377                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/lib.cpython-35m-x86_64-linux-gnu.so
+7fe1846d0000-7fe1846db000 rw-p 00084000 08:06 46535377                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/lib.cpython-35m-x86_64-linux-gnu.so
+7fe1846db000-7fe1846dd000 rw-p 00000000 00:00 0 
+7fe1846dd000-7fe1846f1000 r-xp 00000000 08:06 46535386                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/missing.cpython-35m-x86_64-linux-gnu.so
+7fe1846f1000-7fe1848f0000 ---p 00014000 08:06 46535386                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/missing.cpython-35m-x86_64-linux-gnu.so
+7fe1848f0000-7fe1848f3000 rw-p 00013000 08:06 46535386                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/missing.cpython-35m-x86_64-linux-gnu.so
+7fe1848f3000-7fe184976000 r-xp 00000000 08:06 46535373                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/hashtable.cpython-35m-x86_64-linux-gnu.so
+7fe184976000-7fe184b75000 ---p 00083000 08:06 46535373                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/hashtable.cpython-35m-x86_64-linux-gnu.so
+7fe184b75000-7fe184b7d000 rw-p 00082000 08:06 46535373                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/hashtable.cpython-35m-x86_64-linux-gnu.so
+7fe184b7d000-7fe184b7e000 rw-p 00000000 00:00 0 
+7fe184b7e000-7fe184ba5000 r-xp 00000000 08:06 46535394                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/fields.cpython-35m-x86_64-linux-gnu.so
+7fe184ba5000-7fe184da4000 ---p 00027000 08:06 46535394                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/fields.cpython-35m-x86_64-linux-gnu.so
+7fe184da4000-7fe184da7000 rw-p 00026000 08:06 46535394                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/fields.cpython-35m-x86_64-linux-gnu.so
+7fe184da7000-7fe184dfc000 r-xp 00000000 08:06 46535393                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/timestamps.cpython-35m-x86_64-linux-gnu.so
+7fe184dfc000-7fe184ffb000 ---p 00055000 08:06 46535393                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/timestamps.cpython-35m-x86_64-linux-gnu.so
+7fe184ffb000-7fe185003000 rw-p 00054000 08:06 46535393                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/timestamps.cpython-35m-x86_64-linux-gnu.so
+7fe185003000-7fe185004000 rw-p 00000000 00:00 0 
+7fe185004000-7fe18504a000 r-xp 00000000 08:06 46535396                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/strptime.cpython-35m-x86_64-linux-gnu.so
+7fe18504a000-7fe18524a000 ---p 00046000 08:06 46535396                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/strptime.cpython-35m-x86_64-linux-gnu.so
+7fe18524a000-7fe18524f000 rw-p 00046000 08:06 46535396                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/strptime.cpython-35m-x86_64-linux-gnu.so
+7fe18524f000-7fe185251000 rw-p 00000000 00:00 0 
+7fe185251000-7fe18525e000 r-xp 00000000 08:06 46535391                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/ccalendar.cpython-35m-x86_64-linux-gnu.so
+7fe18525e000-7fe18545e000 ---p 0000d000 08:06 46535391                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/ccalendar.cpython-35m-x86_64-linux-gnu.so
+7fe18545e000-7fe185460000 rw-p 0000d000 08:06 46535391                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/ccalendar.cpython-35m-x86_64-linux-gnu.so
+7fe185460000-7fe1854a2000 r-xp 00000000 08:06 46535401                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/parsing.cpython-35m-x86_64-linux-gnu.so
+7fe1854a2000-7fe1856a1000 ---p 00042000 08:06 46535401                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/parsing.cpython-35m-x86_64-linux-gnu.so
+7fe1856a1000-7fe1856a6000 rw-p 00041000 08:06 46535401                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/parsing.cpython-35m-x86_64-linux-gnu.so
+7fe1856a6000-7fe1856a8000 rw-p 00000000 00:00 0 
+7fe1856a8000-7fe1856c3000 r-xp 00000000 08:06 46535399                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/timezones.cpython-35m-x86_64-linux-gnu.so
+7fe1856c3000-7fe1858c3000 ---p 0001b000 08:06 46535399                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/timezones.cpython-35m-x86_64-linux-gnu.so
+7fe1858c3000-7fe1858c5000 rw-p 0001b000 08:06 46535399                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/timezones.cpython-35m-x86_64-linux-gnu.so
+7fe1858c5000-7fe1858c6000 rw-p 00000000 00:00 0 
+7fe1858c6000-7fe18591d000 r-xp 00000000 08:06 46535405                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/timedeltas.cpython-35m-x86_64-linux-gnu.so
+7fe18591d000-7fe185b1d000 ---p 00057000 08:06 46535405                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/timedeltas.cpython-35m-x86_64-linux-gnu.so
+7fe185b1d000-7fe185b23000 rw-p 00057000 08:06 46535405                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/timedeltas.cpython-35m-x86_64-linux-gnu.so
+7fe185b23000-7fe185b24000 rw-p 00000000 00:00 0 
+7fe185b24000-7fe185b4c000 r-xp 00000000 08:06 46535402                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/nattype.cpython-35m-x86_64-linux-gnu.so
+7fe185b4c000-7fe185d4c000 ---p 00028000 08:06 46535402                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/nattype.cpython-35m-x86_64-linux-gnu.so
+7fe185d4c000-7fe185d50000 rw-p 00028000 08:06 46535402                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/nattype.cpython-35m-x86_64-linux-gnu.so
+7fe185d50000-7fe185d51000 rw-p 00000000 00:00 0 
+7fe185d51000-7fe185d5d000 r-xp 00000000 08:06 46535403                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/np_datetime.cpython-35m-x86_64-linux-gnu.so
+7fe185d5d000-7fe185f5d000 ---p 0000c000 08:06 46535403                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/np_datetime.cpython-35m-x86_64-linux-gnu.so
+7fe185f5d000-7fe185f5e000 rw-p 0000c000 08:06 46535403                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/np_datetime.cpython-35m-x86_64-linux-gnu.so
+7fe185f5e000-7fe185fa8000 r-xp 00000000 08:06 46535392                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/conversion.cpython-35m-x86_64-linux-gnu.so
+7fe185fa8000-7fe1861a7000 ---p 0004a000 08:06 46535392                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/conversion.cpython-35m-x86_64-linux-gnu.so
+7fe1861a7000-7fe1861ab000 rw-p 00049000 08:06 46535392                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslibs/conversion.cpython-35m-x86_64-linux-gnu.so
+7fe1861ab000-7fe1861ac000 rw-p 00000000 00:00 0 
+7fe1861ac000-7fe1861e4000 r-xp 00000000 08:06 46535374                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslib.cpython-35m-x86_64-linux-gnu.so
+7fe1861e4000-7fe1863e3000 ---p 00038000 08:06 46535374                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslib.cpython-35m-x86_64-linux-gnu.so
+7fe1863e3000-7fe1863e6000 rw-p 00037000 08:06 46535374                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/pandas/_libs/tslib.cpython-35m-x86_64-linux-gnu.so
+7fe1863e6000-7fe1863e7000 rw-p 00000000 00:00 0 
+7fe1863e7000-7fe18642b000 r-xp 00000000 08:06 42735784                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_decimal.cpython-35m-x86_64-linux-gnu.so
+7fe18642b000-7fe18662a000 ---p 00044000 08:06 42735784                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_decimal.cpython-35m-x86_64-linux-gnu.so
+7fe18662a000-7fe18662b000 r--p 00043000 08:06 42735784                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_decimal.cpython-35m-x86_64-linux-gnu.so
+7fe18662b000-7fe186633000 rw-p 00044000 08:06 42735784                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_decimal.cpython-35m-x86_64-linux-gnu.so
+7fe186633000-7fe186c34000 rw-p 00000000 00:00 0 
+7fe186c34000-7fe186c7d000 r-xp 00000000 08:06 43256423                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/ndimage/_ni_label.cpython-35m-x86_64-linux-gnu.so
+7fe186c7d000-7fe186e7d000 ---p 00049000 08:06 43256423                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/ndimage/_ni_label.cpython-35m-x86_64-linux-gnu.so
+7fe186e7d000-7fe186e81000 rw-p 00049000 08:06 43256423                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/ndimage/_ni_label.cpython-35m-x86_64-linux-gnu.so
+7fe186e81000-7fe186ec2000 rw-p 00000000 00:00 0 
+7fe186ec2000-7fe186ef5000 r-xp 00000000 08:06 44960093                   /home/ckg/.local/lib/python3.5/site-packages/PIL/.libs/liblzma-90de1f11.so.5.2.2
+7fe186ef5000-7fe1870f4000 ---p 00033000 08:06 44960093                   /home/ckg/.local/lib/python3.5/site-packages/PIL/.libs/liblzma-90de1f11.so.5.2.2
+7fe1870f4000-7fe1870f5000 rw-p 00032000 08:06 44960093                   /home/ckg/.local/lib/python3.5/site-packages/PIL/.libs/liblzma-90de1f11.so.5.2.2
+7fe1870f5000-7fe1870f6000 rw-p 00034000 08:06 44960093                   /home/ckg/.local/lib/python3.5/site-packages/PIL/.libs/liblzma-90de1f11.so.5.2.2
+7fe1870f6000-7fe187185000 r-xp 00000000 08:06 44960094                   /home/ckg/.local/lib/python3.5/site-packages/PIL/.libs/libtiff-8a6d997d.so.5.3.0
+7fe187185000-7fe187385000 ---p 0008f000 08:06 44960094                   /home/ckg/.local/lib/python3.5/site-packages/PIL/.libs/libtiff-8a6d997d.so.5.3.0
+7fe187385000-7fe187389000 rw-p 0008f000 08:06 44960094                   /home/ckg/.local/lib/python3.5/site-packages/PIL/.libs/libtiff-8a6d997d.so.5.3.0
+7fe187389000-7fe187391000 rw-p 00094000 08:06 44960094                   /home/ckg/.local/lib/python3.5/site-packages/PIL/.libs/libtiff-8a6d997d.so.5.3.0
+7fe187391000-7fe1873d8000 r-xp 00000000 08:06 44960099                   /home/ckg/.local/lib/python3.5/site-packages/PIL/.libs/libopenjp2-e366d6b0.so.2.1.0
+7fe1873d8000-7fe1875d8000 ---p 00047000 08:06 44960099                   /home/ckg/.local/lib/python3.5/site-packages/PIL/.libs/libopenjp2-e366d6b0.so.2.1.0
+7fe1875d8000-7fe1875da000 rw-p 00047000 08:06 44960099                   /home/ckg/.local/lib/python3.5/site-packages/PIL/.libs/libopenjp2-e366d6b0.so.2.1.0
+7fe1875da000-7fe1875dc000 rw-p 0004a000 08:06 44960099                   /home/ckg/.local/lib/python3.5/site-packages/PIL/.libs/libopenjp2-e366d6b0.so.2.1.0
+7fe1875dc000-7fe18762d000 r-xp 00000000 08:06 44960095                   /home/ckg/.local/lib/python3.5/site-packages/PIL/.libs/libjpeg-3fe7dfc0.so.9.3.0
+7fe18762d000-7fe18782d000 ---p 00051000 08:06 44960095                   /home/ckg/.local/lib/python3.5/site-packages/PIL/.libs/libjpeg-3fe7dfc0.so.9.3.0
+7fe18782d000-7fe18782e000 rw-p 00051000 08:06 44960095                   /home/ckg/.local/lib/python3.5/site-packages/PIL/.libs/libjpeg-3fe7dfc0.so.9.3.0
+7fe18782e000-7fe187830000 rw-p 00053000 08:06 44960095                   /home/ckg/.local/lib/python3.5/site-packages/PIL/.libs/libjpeg-3fe7dfc0.so.9.3.0
+7fe187830000-7fe1878aa000 r-xp 00000000 08:06 44960008                   /home/ckg/.local/lib/python3.5/site-packages/PIL/_imaging.cpython-35m-x86_64-linux-gnu.so
+7fe1878aa000-7fe187aaa000 ---p 0007a000 08:06 44960008                   /home/ckg/.local/lib/python3.5/site-packages/PIL/_imaging.cpython-35m-x86_64-linux-gnu.so
+7fe187aaa000-7fe187ac0000 rw-p 0007a000 08:06 44960008                   /home/ckg/.local/lib/python3.5/site-packages/PIL/_imaging.cpython-35m-x86_64-linux-gnu.so
+7fe187ac0000-7fe187b00000 rw-p 00000000 00:00 0 
+7fe187b00000-7fe187b2a000 r-xp 00000000 08:06 43256982                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/spatial/_hausdorff.cpython-35m-x86_64-linux-gnu.so
+7fe187b2a000-7fe187d29000 ---p 0002a000 08:06 43256982                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/spatial/_hausdorff.cpython-35m-x86_64-linux-gnu.so
+7fe187d29000-7fe187d2d000 rw-p 00029000 08:06 43256982                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/spatial/_hausdorff.cpython-35m-x86_64-linux-gnu.so
+7fe187d2d000-7fe187d42000 r-xp 00000000 08:06 43256972                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/spatial/_distance_wrap.cpython-35m-x86_64-linux-gnu.so
+7fe187d42000-7fe187f42000 ---p 00015000 08:06 43256972                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/spatial/_distance_wrap.cpython-35m-x86_64-linux-gnu.so
+7fe187f42000-7fe187f43000 rw-p 00015000 08:06 43256972                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/spatial/_distance_wrap.cpython-35m-x86_64-linux-gnu.so
+7fe187f43000-7fe187f6c000 r-xp 00000000 08:06 43256976                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/spatial/_voronoi.cpython-35m-x86_64-linux-gnu.so
+7fe187f6c000-7fe18816c000 ---p 00029000 08:06 43256976                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/spatial/_voronoi.cpython-35m-x86_64-linux-gnu.so
+7fe18816c000-7fe18816f000 rw-p 00029000 08:06 43256976                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/spatial/_voronoi.cpython-35m-x86_64-linux-gnu.so
+7fe18816f000-7fe188170000 rw-p 00000000 00:00 0 
+7fe188170000-7fe188179000 r-xp 00000000 08:06 43256464                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/_lib/messagestream.cpython-35m-x86_64-linux-gnu.so
+7fe188179000-7fe188379000 ---p 00009000 08:06 43256464                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/_lib/messagestream.cpython-35m-x86_64-linux-gnu.so
+7fe188379000-7fe18837a000 rw-p 00009000 08:06 43256464                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/_lib/messagestream.cpython-35m-x86_64-linux-gnu.so
+7fe18837a000-7fe18844c000 r-xp 00000000 08:06 43256973                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/spatial/qhull.cpython-35m-x86_64-linux-gnu.so
+7fe18844c000-7fe18864b000 ---p 000d2000 08:06 43256973                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/spatial/qhull.cpython-35m-x86_64-linux-gnu.so
+7fe18864b000-7fe188654000 rw-p 000d1000 08:06 43256973                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/spatial/qhull.cpython-35m-x86_64-linux-gnu.so
+7fe188654000-7fe188656000 rw-p 00000000 00:00 0 
+7fe188656000-7fe18865c000 rw-p 003e1000 08:06 43256973                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/spatial/qhull.cpython-35m-x86_64-linux-gnu.so
+7fe18865c000-7fe1886f1000 r-xp 00000000 08:06 43256975                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/spatial/ckdtree.cpython-35m-x86_64-linux-gnu.so
+7fe1886f1000-7fe1888f0000 ---p 00095000 08:06 43256975                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/spatial/ckdtree.cpython-35m-x86_64-linux-gnu.so
+7fe1888f0000-7fe1888f9000 rw-p 00094000 08:06 43256975                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/spatial/ckdtree.cpython-35m-x86_64-linux-gnu.so
+7fe1888f9000-7fe188939000 rw-p 00000000 00:00 0 
+7fe188939000-7fe18898a000 r-xp 00000000 08:06 43385063                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/interpnd.cpython-35m-x86_64-linux-gnu.so
+7fe18898a000-7fe188b8a000 ---p 00051000 08:06 43385063                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/interpnd.cpython-35m-x86_64-linux-gnu.so
+7fe188b8a000-7fe188b8f000 rw-p 00051000 08:06 43385063                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/interpnd.cpython-35m-x86_64-linux-gnu.so
+7fe188b8f000-7fe188b90000 rw-p 00000000 00:00 0 
+7fe188b90000-7fe188bde000 r-xp 00000000 08:06 43385047                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/_ppoly.cpython-35m-x86_64-linux-gnu.so
+7fe188bde000-7fe188dde000 ---p 0004e000 08:06 43385047                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/_ppoly.cpython-35m-x86_64-linux-gnu.so
+7fe188dde000-7fe188de4000 rw-p 0004e000 08:06 43385047                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/_ppoly.cpython-35m-x86_64-linux-gnu.so
+7fe188de4000-7fe188de5000 rw-p 00000000 00:00 0 
+7fe188de5000-7fe188de9000 rw-p 0019f000 08:06 43385047                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/_ppoly.cpython-35m-x86_64-linux-gnu.so
+7fe188de9000-7fe188e25000 r-xp 00000000 08:06 43385064                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/_bspl.cpython-35m-x86_64-linux-gnu.so
+7fe188e25000-7fe189024000 ---p 0003c000 08:06 43385064                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/_bspl.cpython-35m-x86_64-linux-gnu.so
+7fe189024000-7fe18902a000 rw-p 0003b000 08:06 43385064                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/_bspl.cpython-35m-x86_64-linux-gnu.so
+7fe18902a000-7fe18902b000 rw-p 00000000 00:00 0 
+7fe18902b000-7fe18902e000 rw-p 0013f000 08:06 43385064                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/_bspl.cpython-35m-x86_64-linux-gnu.so
+7fe18902e000-7fe18908d000 r-xp 00000000 08:06 43385061                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/dfitpack.cpython-35m-x86_64-linux-gnu.so
+7fe18908d000-7fe18928d000 ---p 0005f000 08:06 43385061                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/dfitpack.cpython-35m-x86_64-linux-gnu.so
+7fe18928d000-7fe189294000 rw-p 0005f000 08:06 43385061                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/dfitpack.cpython-35m-x86_64-linux-gnu.so
+7fe189294000-7fe189296000 rw-p 00112000 08:06 43385061                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/dfitpack.cpython-35m-x86_64-linux-gnu.so
+7fe189296000-7fe1892ca000 r-xp 00000000 08:06 43385049                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/_fitpack.cpython-35m-x86_64-linux-gnu.so
+7fe1892ca000-7fe1894ca000 ---p 00034000 08:06 43385049                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/_fitpack.cpython-35m-x86_64-linux-gnu.so
+7fe1894ca000-7fe1894cb000 rw-p 00034000 08:06 43385049                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/_fitpack.cpython-35m-x86_64-linux-gnu.so
+7fe1894cb000-7fe1894cd000 rw-p 00091000 08:06 43385049                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/interpolate/_fitpack.cpython-35m-x86_64-linux-gnu.so
+7fe1894cd000-7fe1894de000 r-xp 00000000 08:06 43256537                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/special/_ellip_harm_2.cpython-35m-x86_64-linux-gnu.so
+7fe1894de000-7fe1896de000 ---p 00011000 08:06 43256537                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/special/_ellip_harm_2.cpython-35m-x86_64-linux-gnu.so
+7fe1896de000-7fe1896e0000 rw-p 00011000 08:06 43256537                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/special/_ellip_harm_2.cpython-35m-x86_64-linux-gnu.so
+7fe1896e0000-7fe1896e4000 rw-p 0005a000 08:06 43256537                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/special/_ellip_harm_2.cpython-35m-x86_64-linux-gnu.so
+7fe1896e4000-7fe1896ea000 r-xp 00000000 08:06 43256529                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/special/_comb.cpython-35m-x86_64-linux-gnu.so
+7fe1896ea000-7fe1898ea000 ---p 00006000 08:06 43256529                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/special/_comb.cpython-35m-x86_64-linux-gnu.so
+7fe1898ea000-7fe1898eb000 rw-p 00006000 08:06 43256529                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/special/_comb.cpython-35m-x86_64-linux-gnu.so
+7fe1898eb000-7fe18992b000 rw-p 00000000 00:00 0 
+7fe18992b000-7fe1899e0000 r-xp 00000000 08:06 43256522                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/special/specfun.cpython-35m-x86_64-linux-gnu.so
+7fe1899e0000-7fe189be0000 ---p 000b5000 08:06 43256522                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/special/specfun.cpython-35m-x86_64-linux-gnu.so
+7fe189be0000-7fe189be7000 rw-p 000b5000 08:06 43256522                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/special/specfun.cpython-35m-x86_64-linux-gnu.so
+7fe189be7000-7fe189be9000 rw-p 0019d000 08:06 43256522                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/special/specfun.cpython-35m-x86_64-linux-gnu.so
+7fe189be9000-7fe189c05000 r-xp 00000000 08:06 43256542                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/special/_ufuncs_cxx.cpython-35m-x86_64-linux-gnu.so
+7fe189c05000-7fe189e05000 ---p 0001c000 08:06 43256542                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/special/_ufuncs_cxx.cpython-35m-x86_64-linux-gnu.so
+7fe189e05000-7fe189e06000 rw-p 0001c000 08:06 43256542                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/special/_ufuncs_cxx.cpython-35m-x86_64-linux-gnu.so
+7fe189e06000-7fe189e07000 rw-p 00000000 00:00 0 
+7fe189e07000-7fe189f86000 r-xp 00000000 08:06 43256533                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/special/_ufuncs.cpython-35m-x86_64-linux-gnu.so
+7fe189f86000-7fe18a185000 ---p 0017f000 08:06 43256533                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/special/_ufuncs.cpython-35m-x86_64-linux-gnu.so
+7fe18a185000-7fe18a18e000 rw-p 0017e000 08:06 43256533                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/special/_ufuncs.cpython-35m-x86_64-linux-gnu.so
+7fe18a18e000-7fe18a196000 rw-p 00000000 00:00 0 
+7fe18a196000-7fe18a19b000 rw-p 004b5000 08:06 43256533                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/special/_ufuncs.cpython-35m-x86_64-linux-gnu.so
+7fe18a19b000-7fe18a1db000 rw-p 00000000 00:00 0 
+7fe18a1db000-7fe18a1f6000 r-xp 00000000 08:06 43256418                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/ndimage/_nd_image.cpython-35m-x86_64-linux-gnu.so
+7fe18a1f6000-7fe18a3f5000 ---p 0001b000 08:06 43256418                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/ndimage/_nd_image.cpython-35m-x86_64-linux-gnu.so
+7fe18a3f5000-7fe18a3f6000 rw-p 0001a000 08:06 43256418                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/ndimage/_nd_image.cpython-35m-x86_64-linux-gnu.so
+7fe18a3f6000-7fe18a436000 rw-p 00000000 00:00 0 
+7fe18a436000-7fe18a4c1000 r-xp 00000000 08:06 43256306                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/cython_lapack.cpython-35m-x86_64-linux-gnu.so
+7fe18a4c1000-7fe18a6c0000 ---p 0008b000 08:06 43256306                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/cython_lapack.cpython-35m-x86_64-linux-gnu.so
+7fe18a6c0000-7fe18a6c4000 rw-p 0008a000 08:06 43256306                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/cython_lapack.cpython-35m-x86_64-linux-gnu.so
+7fe18a6c4000-7fe18a6d5000 rw-p 001eb000 08:06 43256306                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/cython_lapack.cpython-35m-x86_64-linux-gnu.so
+7fe18a6d5000-7fe18a70f000 r-xp 00000000 08:06 43256300                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/cython_blas.cpython-35m-x86_64-linux-gnu.so
+7fe18a70f000-7fe18a90f000 ---p 0003a000 08:06 43256300                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/cython_blas.cpython-35m-x86_64-linux-gnu.so
+7fe18a90f000-7fe18a913000 rw-p 0003a000 08:06 43256300                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/cython_blas.cpython-35m-x86_64-linux-gnu.so
+7fe18a913000-7fe18a91a000 rw-p 00133000 08:06 43256300                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/cython_blas.cpython-35m-x86_64-linux-gnu.so
+7fe18a91a000-7fe18a962000 r-xp 00000000 08:06 43256298                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/_decomp_update.cpython-35m-x86_64-linux-gnu.so
+7fe18a962000-7fe18ab61000 ---p 00048000 08:06 43256298                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/_decomp_update.cpython-35m-x86_64-linux-gnu.so
+7fe18ab61000-7fe18ab67000 rw-p 00047000 08:06 43256298                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/_decomp_update.cpython-35m-x86_64-linux-gnu.so
+7fe18ab67000-7fe18ab68000 rw-p 00000000 00:00 0 
+7fe18ab68000-7fe18ab9c000 r-xp 00000000 08:06 43256321                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/_solve_toeplitz.cpython-35m-x86_64-linux-gnu.so
+7fe18ab9c000-7fe18ad9c000 ---p 00034000 08:06 43256321                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/_solve_toeplitz.cpython-35m-x86_64-linux-gnu.so
+7fe18ad9c000-7fe18ada0000 rw-p 00034000 08:06 43256321                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/_solve_toeplitz.cpython-35m-x86_64-linux-gnu.so
+7fe18ada0000-7fe18ada1000 rw-p 00000000 00:00 0 
+7fe18ada1000-7fe18adae000 r-xp 00000000 08:06 43256294                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/_flinalg.cpython-35m-x86_64-linux-gnu.so
+7fe18adae000-7fe18afae000 ---p 0000d000 08:06 43256294                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/_flinalg.cpython-35m-x86_64-linux-gnu.so
+7fe18afae000-7fe18afb1000 rw-p 0000d000 08:06 43256294                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/_flinalg.cpython-35m-x86_64-linux-gnu.so
+7fe18afb1000-7fe18afb4000 rw-p 00032000 08:06 43256294                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/_flinalg.cpython-35m-x86_64-linux-gnu.so
+7fe18afb4000-7fe18aff4000 rw-p 00000000 00:00 0 
+7fe18aff4000-7fe18b0db000 r-xp 00000000 08:06 43256304                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/_flapack.cpython-35m-x86_64-linux-gnu.so
+7fe18b0db000-7fe18b2db000 ---p 000e7000 08:06 43256304                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/_flapack.cpython-35m-x86_64-linux-gnu.so
+7fe18b2db000-7fe18b330000 rw-p 000e7000 08:06 43256304                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/_flapack.cpython-35m-x86_64-linux-gnu.so
+7fe18b330000-7fe18b338000 rw-p 00335000 08:06 43256304                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/_flapack.cpython-35m-x86_64-linux-gnu.so
+7fe18b338000-7fe18b3a5000 r-xp 00000000 08:06 43256320                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/_fblas.cpython-35m-x86_64-linux-gnu.so
+7fe18b3a5000-7fe18b5a5000 ---p 0006d000 08:06 43256320                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/_fblas.cpython-35m-x86_64-linux-gnu.so
+7fe18b5a5000-7fe18b5cb000 rw-p 0006d000 08:06 43256320                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/_fblas.cpython-35m-x86_64-linux-gnu.so
+7fe18b5cb000-7fe18b5d0000 rw-p 00158000 08:06 43256320                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/linalg/_fblas.cpython-35m-x86_64-linux-gnu.so
+7fe18b5d0000-7fe18b6d0000 rw-p 00000000 00:00 0 
+7fe18b6d0000-7fe18b718000 r-xp 00000000 08:06 43384934                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/csgraph/_reordering.cpython-35m-x86_64-linux-gnu.so
+7fe18b718000-7fe18b918000 ---p 00048000 08:06 43384934                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/csgraph/_reordering.cpython-35m-x86_64-linux-gnu.so
+7fe18b918000-7fe18b91d000 rw-p 00048000 08:06 43384934                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/csgraph/_reordering.cpython-35m-x86_64-linux-gnu.so
+7fe18b91d000-7fe18b91e000 rw-p 00000000 00:00 0 
+7fe18b91e000-7fe18b949000 r-xp 00000000 08:06 43384933                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/csgraph/_min_spanning_tree.cpython-35m-x86_64-linux-gnu.so
+7fe18b949000-7fe18bb48000 ---p 0002b000 08:06 43384933                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/csgraph/_min_spanning_tree.cpython-35m-x86_64-linux-gnu.so
+7fe18bb48000-7fe18bb4c000 rw-p 0002a000 08:06 43384933                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/csgraph/_min_spanning_tree.cpython-35m-x86_64-linux-gnu.so
+7fe18bb4c000-7fe18bb4d000 rw-p 00000000 00:00 0 
+7fe18bb4d000-7fe18bb6a000 r-xp 00000000 08:06 43384936                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/csgraph/_traversal.cpython-35m-x86_64-linux-gnu.so
+7fe18bb6a000-7fe18bd6a000 ---p 0001d000 08:06 43384936                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/csgraph/_traversal.cpython-35m-x86_64-linux-gnu.so
+7fe18bd6a000-7fe18bd6e000 rw-p 0001d000 08:06 43384936                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/csgraph/_traversal.cpython-35m-x86_64-linux-gnu.so
+7fe18bd6e000-7fe18bd8d000 r-xp 00000000 08:06 43384935                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/csgraph/_tools.cpython-35m-x86_64-linux-gnu.so
+7fe18bd8d000-7fe18bf8d000 ---p 0001f000 08:06 43384935                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/csgraph/_tools.cpython-35m-x86_64-linux-gnu.so
+7fe18bf8d000-7fe18bf91000 rw-p 0001f000 08:06 43384935                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/csgraph/_tools.cpython-35m-x86_64-linux-gnu.so
+7fe18bf91000-7fe18bfc6000 r-xp 00000000 08:06 43384940                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/csgraph/_shortest_path.cpython-35m-x86_64-linux-gnu.so
+7fe18bfc6000-7fe18c1c5000 ---p 00035000 08:06 43384940                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/csgraph/_shortest_path.cpython-35m-x86_64-linux-gnu.so
+7fe18c1c5000-7fe18c1cb000 rw-p 00034000 08:06 43384940                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/csgraph/_shortest_path.cpython-35m-x86_64-linux-gnu.so
+7fe18c1cb000-7fe18c1cc000 rw-p 00000000 00:00 0 
+7fe18c1cc000-7fe18c232000 r-xp 00000000 08:06 43257057                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/_csparsetools.cpython-35m-x86_64-linux-gnu.so
+7fe18c232000-7fe18c432000 ---p 00066000 08:06 43257057                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/_csparsetools.cpython-35m-x86_64-linux-gnu.so
+7fe18c432000-7fe18c438000 rw-p 00066000 08:06 43257057                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/_csparsetools.cpython-35m-x86_64-linux-gnu.so
+7fe18c438000-7fe18c479000 rw-p 00000000 00:00 0 
+7fe18c479000-7fe18c7b4000 r-xp 00000000 08:06 43257047                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/_sparsetools.cpython-35m-x86_64-linux-gnu.so
+7fe18c7b4000-7fe18c9b4000 ---p 0033b000 08:06 43257047                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/_sparsetools.cpython-35m-x86_64-linux-gnu.so
+7fe18c9b4000-7fe18c9b5000 rw-p 0033b000 08:06 43257047                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/sparse/_sparsetools.cpython-35m-x86_64-linux-gnu.so
+7fe18c9b5000-7fe18c9f5000 rw-p 00000000 00:00 0 
+7fe18c9f5000-7fe18ca02000 r-xp 00000000 08:06 43256476                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/_lib/_ccallback_c.cpython-35m-x86_64-linux-gnu.so
+7fe18ca02000-7fe18cc02000 ---p 0000d000 08:06 43256476                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/_lib/_ccallback_c.cpython-35m-x86_64-linux-gnu.so
+7fe18cc02000-7fe18cc04000 rw-p 0000d000 08:06 43256476                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/scipy/_lib/_ccallback_c.cpython-35m-x86_64-linux-gnu.so
+7fe18cc04000-7fe18cc44000 rw-p 00000000 00:00 0 
+7fe18cc44000-7fe18cd01000 r-xp 00000000 08:06 42735792                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/unicodedata.cpython-35m-x86_64-linux-gnu.so
+7fe18cd01000-7fe18cf00000 ---p 000bd000 08:06 42735792                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/unicodedata.cpython-35m-x86_64-linux-gnu.so
+7fe18cf00000-7fe18cf01000 r--p 000bc000 08:06 42735792                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/unicodedata.cpython-35m-x86_64-linux-gnu.so
+7fe18cf01000-7fe18cf19000 rw-p 000bd000 08:06 42735792                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/unicodedata.cpython-35m-x86_64-linux-gnu.so
+7fe18cf19000-7fe18d399000 rw-p 00000000 00:00 0 
+7fe18d399000-7fe18d39d000 r-xp 00000000 08:01 1975523                    /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7fe18d39d000-7fe18d59c000 ---p 00004000 08:01 1975523                    /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7fe18d59c000-7fe18d59d000 r--p 00003000 08:01 1975523                    /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7fe18d59d000-7fe18d59e000 rw-p 00004000 08:01 1975523                    /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7fe18d59e000-7fe18d5de000 rw-p 00000000 00:00 0 
+7fe18d5de000-7fe18d5f5000 r-xp 00000000 08:06 46023318                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5l.cpython-35m-x86_64-linux-gnu.so
+7fe18d5f5000-7fe18d7f5000 ---p 00017000 08:06 46023318                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5l.cpython-35m-x86_64-linux-gnu.so
+7fe18d7f5000-7fe18d7fb000 rw-p 00017000 08:06 46023318                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5l.cpython-35m-x86_64-linux-gnu.so
+7fe18d7fb000-7fe18d813000 r-xp 00000000 08:06 46023342                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5o.cpython-35m-x86_64-linux-gnu.so
+7fe18d813000-7fe18da13000 ---p 00018000 08:06 46023342                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5o.cpython-35m-x86_64-linux-gnu.so
+7fe18da13000-7fe18da1a000 rw-p 00018000 08:06 46023342                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5o.cpython-35m-x86_64-linux-gnu.so
+7fe18da1a000-7fe18da5a000 rw-p 00000000 00:00 0 
+7fe18da5a000-7fe18da5e000 r-xp 00000000 08:06 46023323                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5fd.cpython-35m-x86_64-linux-gnu.so
+7fe18da5e000-7fe18dc5e000 ---p 00004000 08:06 46023323                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5fd.cpython-35m-x86_64-linux-gnu.so
+7fe18dc5e000-7fe18dc5f000 rw-p 00004000 08:06 46023323                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5fd.cpython-35m-x86_64-linux-gnu.so
+7fe18dc5f000-7fe18dc61000 rw-p 00006000 08:06 46023323                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5fd.cpython-35m-x86_64-linux-gnu.so
+7fe18dc61000-7fe18dc6d000 r-xp 00000000 08:06 46023338                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5i.cpython-35m-x86_64-linux-gnu.so
+7fe18dc6d000-7fe18de6c000 ---p 0000c000 08:06 46023338                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5i.cpython-35m-x86_64-linux-gnu.so
+7fe18de6c000-7fe18de71000 rw-p 0000b000 08:06 46023338                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5i.cpython-35m-x86_64-linux-gnu.so
+7fe18de71000-7fe18de98000 r-xp 00000000 08:06 46023324                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5g.cpython-35m-x86_64-linux-gnu.so
+7fe18de98000-7fe18e097000 ---p 00027000 08:06 46023324                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5g.cpython-35m-x86_64-linux-gnu.so
+7fe18e097000-7fe18e09e000 rw-p 00026000 08:06 46023324                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5g.cpython-35m-x86_64-linux-gnu.so
+7fe18e09e000-7fe18e0b8000 r-xp 00000000 08:06 46023320                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5f.cpython-35m-x86_64-linux-gnu.so
+7fe18e0b8000-7fe18e2b8000 ---p 0001a000 08:06 46023320                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5f.cpython-35m-x86_64-linux-gnu.so
+7fe18e2b8000-7fe18e2bc000 rw-p 0001a000 08:06 46023320                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5f.cpython-35m-x86_64-linux-gnu.so
+7fe18e2bc000-7fe18e2bd000 rw-p 00000000 00:00 0 
+7fe18e2bd000-7fe18e2c0000 rw-p 0001e000 08:06 46023320                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5f.cpython-35m-x86_64-linux-gnu.so
+7fe18e2c0000-7fe18e2d1000 r-xp 00000000 08:06 46023336                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5ds.cpython-35m-x86_64-linux-gnu.so
+7fe18e2d1000-7fe18e4d0000 ---p 00011000 08:06 46023336                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5ds.cpython-35m-x86_64-linux-gnu.so
+7fe18e4d0000-7fe18e4d5000 rw-p 00010000 08:06 46023336                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5ds.cpython-35m-x86_64-linux-gnu.so
+7fe18e4d5000-7fe18e4f0000 r-xp 00000000 08:06 46023340                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5d.cpython-35m-x86_64-linux-gnu.so
+7fe18e4f0000-7fe18e6f0000 ---p 0001b000 08:06 46023340                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5d.cpython-35m-x86_64-linux-gnu.so
+7fe18e6f0000-7fe18e6f3000 rw-p 0001b000 08:06 46023340                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5d.cpython-35m-x86_64-linux-gnu.so
+7fe18e6f3000-7fe18e6f4000 rw-p 00000000 00:00 0 
+7fe18e6f4000-7fe18e6f7000 rw-p 0001f000 08:06 46023340                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5d.cpython-35m-x86_64-linux-gnu.so
+7fe18e6f7000-7fe18e700000 r-xp 00000000 08:06 46023344                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/_proxy.cpython-35m-x86_64-linux-gnu.so
+7fe18e700000-7fe18e900000 ---p 00009000 08:06 46023344                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/_proxy.cpython-35m-x86_64-linux-gnu.so
+7fe18e900000-7fe18e903000 rw-p 00009000 08:06 46023344                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/_proxy.cpython-35m-x86_64-linux-gnu.so
+7fe18e903000-7fe18e90e000 r-xp 00000000 08:06 46023329                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5ac.cpython-35m-x86_64-linux-gnu.so
+7fe18e90e000-7fe18eb0d000 ---p 0000b000 08:06 46023329                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5ac.cpython-35m-x86_64-linux-gnu.so
+7fe18eb0d000-7fe18eb11000 rw-p 0000a000 08:06 46023329                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5ac.cpython-35m-x86_64-linux-gnu.so
+7fe18eb11000-7fe18eb51000 rw-p 00000000 00:00 0 
+7fe18eb51000-7fe18eba6000 r-xp 00000000 08:06 46023332                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5p.cpython-35m-x86_64-linux-gnu.so
+7fe18eba6000-7fe18eda5000 ---p 00055000 08:06 46023332                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5p.cpython-35m-x86_64-linux-gnu.so
+7fe18eda5000-7fe18edaf000 rw-p 00054000 08:06 46023332                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5p.cpython-35m-x86_64-linux-gnu.so
+7fe18edaf000-7fe18edb0000 rw-p 00000000 00:00 0 
+7fe18edb0000-7fe18edb3000 rw-p 0005f000 08:06 46023332                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5p.cpython-35m-x86_64-linux-gnu.so
+7fe18edb3000-7fe18edcc000 r-xp 00000000 08:06 46023333                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5s.cpython-35m-x86_64-linux-gnu.so
+7fe18edcc000-7fe18efcb000 ---p 00019000 08:06 46023333                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5s.cpython-35m-x86_64-linux-gnu.so
+7fe18efcb000-7fe18efd2000 rw-p 00018000 08:06 46023333                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5s.cpython-35m-x86_64-linux-gnu.so
+7fe18efd2000-7fe18eff2000 r-xp 00000000 08:06 46023345                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5a.cpython-35m-x86_64-linux-gnu.so
+7fe18eff2000-7fe18f1f1000 ---p 00020000 08:06 46023345                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5a.cpython-35m-x86_64-linux-gnu.so
+7fe18f1f1000-7fe18f1f8000 rw-p 0001f000 08:06 46023345                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5a.cpython-35m-x86_64-linux-gnu.so
+7fe18f1f8000-7fe18f200000 r-xp 00000000 08:06 46023343                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5z.cpython-35m-x86_64-linux-gnu.so
+7fe18f200000-7fe18f400000 ---p 00008000 08:06 46023343                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5z.cpython-35m-x86_64-linux-gnu.so
+7fe18f400000-7fe18f404000 rw-p 00008000 08:06 46023343                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5z.cpython-35m-x86_64-linux-gnu.so
+7fe18f404000-7fe18f41b000 r-xp 00000000 08:06 46023334                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5.cpython-35m-x86_64-linux-gnu.so
+7fe18f41b000-7fe18f61b000 ---p 00017000 08:06 46023334                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5.cpython-35m-x86_64-linux-gnu.so
+7fe18f61b000-7fe18f621000 rw-p 00017000 08:06 46023334                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5.cpython-35m-x86_64-linux-gnu.so
+7fe18f621000-7fe18f62a000 r-xp 00000000 08:06 46023327                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/utils.cpython-35m-x86_64-linux-gnu.so
+7fe18f62a000-7fe18f82a000 ---p 00009000 08:06 46023327                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/utils.cpython-35m-x86_64-linux-gnu.so
+7fe18f82a000-7fe18f82b000 rw-p 00009000 08:06 46023327                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/utils.cpython-35m-x86_64-linux-gnu.so
+7fe18f82b000-7fe18f82e000 rw-p 0000b000 08:06 46023327                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/utils.cpython-35m-x86_64-linux-gnu.so
+7fe18f82e000-7fe18f89f000 r-xp 00000000 08:06 46023326                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5t.cpython-35m-x86_64-linux-gnu.so
+7fe18f89f000-7fe18fa9e000 ---p 00071000 08:06 46023326                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5t.cpython-35m-x86_64-linux-gnu.so
+7fe18fa9e000-7fe18faa9000 rw-p 00070000 08:06 46023326                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5t.cpython-35m-x86_64-linux-gnu.so
+7fe18faa9000-7fe18faaa000 rw-p 00000000 00:00 0 
+7fe18faaa000-7fe18faae000 rw-p 0007b000 08:06 46023326                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5t.cpython-35m-x86_64-linux-gnu.so
+7fe18faae000-7fe18fae0000 r-xp 00000000 08:06 46023321                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/defs.cpython-35m-x86_64-linux-gnu.so
+7fe18fae0000-7fe18fcdf000 ---p 00032000 08:06 46023321                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/defs.cpython-35m-x86_64-linux-gnu.so
+7fe18fcdf000-7fe18fce1000 rw-p 00031000 08:06 46023321                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/defs.cpython-35m-x86_64-linux-gnu.so
+7fe18fce1000-7fe18fce8000 rw-p 00034000 08:06 46023321                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/defs.cpython-35m-x86_64-linux-gnu.so
+7fe18fce8000-7fe18fd07000 r-xp 00000000 08:06 46023331                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/_objects.cpython-35m-x86_64-linux-gnu.so
+7fe18fd07000-7fe18ff06000 ---p 0001f000 08:06 46023331                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/_objects.cpython-35m-x86_64-linux-gnu.so
+7fe18ff06000-7fe18ff0d000 rw-p 0001e000 08:06 46023331                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/_objects.cpython-35m-x86_64-linux-gnu.so
+7fe18ff0d000-7fe18ff1a000 r-xp 00000000 08:06 46023341                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5r.cpython-35m-x86_64-linux-gnu.so
+7fe18ff1a000-7fe190119000 ---p 0000d000 08:06 46023341                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5r.cpython-35m-x86_64-linux-gnu.so
+7fe190119000-7fe19011b000 rw-p 0000c000 08:06 46023341                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5r.cpython-35m-x86_64-linux-gnu.so
+7fe19011b000-7fe19011c000 rw-p 00000000 00:00 0 
+7fe19011c000-7fe19011f000 rw-p 0000f000 08:06 46023341                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/h5r.cpython-35m-x86_64-linux-gnu.so
+7fe19011f000-7fe190131000 r-xp 00000000 08:06 46023330                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/_conv.cpython-35m-x86_64-linux-gnu.so
+7fe190131000-7fe190331000 ---p 00012000 08:06 46023330                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/_conv.cpython-35m-x86_64-linux-gnu.so
+7fe190331000-7fe190332000 rw-p 00012000 08:06 46023330                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/_conv.cpython-35m-x86_64-linux-gnu.so
+7fe190332000-7fe190335000 rw-p 00014000 08:06 46023330                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/_conv.cpython-35m-x86_64-linux-gnu.so
+7fe190335000-7fe190349000 r-xp 00000000 08:06 46023440                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libz-a147dcb0.so.1.2.3
+7fe190349000-7fe190548000 ---p 00014000 08:06 46023440                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libz-a147dcb0.so.1.2.3
+7fe190548000-7fe190549000 rw-p 00013000 08:06 46023440                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libz-a147dcb0.so.1.2.3
+7fe190549000-7fe19054a000 rw-p 00015000 08:06 46023440                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libz-a147dcb0.so.1.2.3
+7fe19054a000-7fe190552000 r-xp 00000000 08:06 46023438                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libaec-2147abcd.so.0.0.4
+7fe190552000-7fe190751000 ---p 00008000 08:06 46023438                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libaec-2147abcd.so.0.0.4
+7fe190751000-7fe190752000 rw-p 00007000 08:06 46023438                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libaec-2147abcd.so.0.0.4
+7fe190752000-7fe190753000 rw-p 00009000 08:06 46023438                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libaec-2147abcd.so.0.0.4
+7fe190753000-7fe190755000 r-xp 00000000 08:06 46023437                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libsz-1c7dd0cf.so.2.0.1
+7fe190755000-7fe190954000 ---p 00002000 08:06 46023437                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libsz-1c7dd0cf.so.2.0.1
+7fe190954000-7fe190957000 rw-p 00001000 08:06 46023437                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libsz-1c7dd0cf.so.2.0.1
+7fe190957000-7fe190978000 r-xp 00000000 08:06 46023439                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libhdf5_hl-d68fbc5b.so.100.1.0
+7fe190978000-7fe190b78000 ---p 00021000 08:06 46023439                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libhdf5_hl-d68fbc5b.so.100.1.0
+7fe190b78000-7fe190b79000 rw-p 00021000 08:06 46023439                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libhdf5_hl-d68fbc5b.so.100.1.0
+7fe190b79000-7fe190b7a000 rw-p 00000000 00:00 0 
+7fe190b7a000-7fe190b84000 rw-p 00023000 08:06 46023439                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libhdf5_hl-d68fbc5b.so.100.1.0
+7fe190b84000-7fe190f21000 r-xp 00000000 08:06 46023441                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libhdf5-b253f31d.so.101.1.0
+7fe190f21000-7fe191121000 ---p 0039d000 08:06 46023441                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libhdf5-b253f31d.so.101.1.0
+7fe191121000-7fe191133000 rw-p 0039d000 08:06 46023441                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libhdf5-b253f31d.so.101.1.0
+7fe191133000-7fe191135000 rw-p 00000000 00:00 0 
+7fe191135000-7fe191173000 rw-p 003af000 08:06 46023441                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/.libs/libhdf5-b253f31d.so.101.1.0
+7fe191173000-7fe19117e000 r-xp 00000000 08:06 46023339                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/_errors.cpython-35m-x86_64-linux-gnu.so
+7fe19117e000-7fe19137e000 ---p 0000b000 08:06 46023339                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/_errors.cpython-35m-x86_64-linux-gnu.so
+7fe19137e000-7fe19137f000 rw-p 0000b000 08:06 46023339                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/_errors.cpython-35m-x86_64-linux-gnu.so
+7fe19137f000-7fe191382000 rw-p 0000d000 08:06 46023339                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/h5py/_errors.cpython-35m-x86_64-linux-gnu.so
+7fe191382000-7fe191a02000 rw-p 00000000 00:00 0 
+7fe191a02000-7fe191a13000 r-xp 00000000 08:06 42735732                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_json.cpython-35m-x86_64-linux-gnu.so
+7fe191a13000-7fe191c12000 ---p 00011000 08:06 42735732                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_json.cpython-35m-x86_64-linux-gnu.so
+7fe191c12000-7fe191c13000 r--p 00010000 08:06 42735732                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_json.cpython-35m-x86_64-linux-gnu.so
+7fe191c13000-7fe191c14000 rw-p 00011000 08:06 42735732                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_json.cpython-35m-x86_64-linux-gnu.so
+7fe191c14000-7fe192154000 rw-p 00000000 00:00 0 
+7fe192154000-7fe192155000 rw-s 00000000 00:06 455                        /dev/nvidiactl
+7fe192155000-7fe1922d5000 rw-p 00000000 00:00 0 
+7fe1922d5000-7fe1922e8000 r-xp 00000000 08:06 42995482                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/framework/fast_tensor_util.so
+7fe1922e8000-7fe1924e7000 ---p 00013000 08:06 42995482                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/framework/fast_tensor_util.so
+7fe1924e7000-7fe1924e8000 r--p 00012000 08:06 42995482                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/framework/fast_tensor_util.so
+7fe1924e8000-7fe1924ea000 rw-p 00013000 08:06 42995482                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/framework/fast_tensor_util.so
+7fe1924ea000-7fe1925aa000 rw-p 00000000 00:00 0 
+7fe1925aa000-7fe1925ae000 r-xp 00000000 08:06 42735578                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/termios.cpython-35m-x86_64-linux-gnu.so
+7fe1925ae000-7fe1927ae000 ---p 00004000 08:06 42735578                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/termios.cpython-35m-x86_64-linux-gnu.so
+7fe1927ae000-7fe1927af000 r--p 00004000 08:06 42735578                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/termios.cpython-35m-x86_64-linux-gnu.so
+7fe1927af000-7fe1927b1000 rw-p 00005000 08:06 42735578                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/termios.cpython-35m-x86_64-linux-gnu.so
+7fe1927b1000-7fe1927b4000 r-xp 00000000 08:06 42735471                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/fcntl.cpython-35m-x86_64-linux-gnu.so
+7fe1927b4000-7fe1929b3000 ---p 00003000 08:06 42735471                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/fcntl.cpython-35m-x86_64-linux-gnu.so
+7fe1929b3000-7fe1929b4000 r--p 00002000 08:06 42735471                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/fcntl.cpython-35m-x86_64-linux-gnu.so
+7fe1929b4000-7fe1929b5000 rw-p 00003000 08:06 42735471                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/fcntl.cpython-35m-x86_64-linux-gnu.so
+7fe1929b5000-7fe1929bd000 r-xp 00000000 08:06 42735668                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_csv.cpython-35m-x86_64-linux-gnu.so
+7fe1929bd000-7fe192bbc000 ---p 00008000 08:06 42735668                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_csv.cpython-35m-x86_64-linux-gnu.so
+7fe192bbc000-7fe192bbd000 r--p 00007000 08:06 42735668                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_csv.cpython-35m-x86_64-linux-gnu.so
+7fe192bbd000-7fe192bbf000 rw-p 00008000 08:06 42735668                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_csv.cpython-35m-x86_64-linux-gnu.so
+7fe192bbf000-7fe192cbf000 rw-p 00000000 00:00 0 
+7fe192cbf000-7fe192ed6000 r-xp 00000000 08:06 42862392                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/google/protobuf/pyext/_message.cpython-35m-x86_64-linux-gnu.so
+7fe192ed6000-7fe1930d5000 ---p 00217000 08:06 42862392                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/google/protobuf/pyext/_message.cpython-35m-x86_64-linux-gnu.so
+7fe1930d5000-7fe1930e6000 rw-p 00216000 08:06 42862392                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/google/protobuf/pyext/_message.cpython-35m-x86_64-linux-gnu.so
+7fe1930e6000-7fe1930e7000 rw-p 00000000 00:00 0 
+7fe1930e7000-7fe1930e8000 r-xp 00000000 08:06 42862272                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/google/protobuf/internal/_api_implementation.cpython-35m-x86_64-linux-gnu.so
+7fe1930e8000-7fe1932e7000 ---p 00001000 08:06 42862272                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/google/protobuf/internal/_api_implementation.cpython-35m-x86_64-linux-gnu.so
+7fe1932e7000-7fe1932e8000 rw-p 00000000 08:06 42862272                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/google/protobuf/internal/_api_implementation.cpython-35m-x86_64-linux-gnu.so
+7fe1932e8000-7fe193568000 rw-p 00000000 00:00 0 
+7fe193568000-7fe1935b6000 r-xp 00000000 08:06 42735785                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/pyexpat.cpython-35m-x86_64-linux-gnu.so
+7fe1935b6000-7fe1937b6000 ---p 0004e000 08:06 42735785                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/pyexpat.cpython-35m-x86_64-linux-gnu.so
+7fe1937b6000-7fe1937b9000 r--p 0004e000 08:06 42735785                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/pyexpat.cpython-35m-x86_64-linux-gnu.so
+7fe1937b9000-7fe1937bb000 rw-p 00051000 08:06 42735785                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/pyexpat.cpython-35m-x86_64-linux-gnu.so
+7fe1937bb000-7fe1937bf000 r-xp 00000000 08:06 42735504                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_posixsubprocess.cpython-35m-x86_64-linux-gnu.so
+7fe1937bf000-7fe1939be000 ---p 00004000 08:06 42735504                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_posixsubprocess.cpython-35m-x86_64-linux-gnu.so
+7fe1939be000-7fe1939bf000 r--p 00003000 08:06 42735504                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_posixsubprocess.cpython-35m-x86_64-linux-gnu.so
+7fe1939bf000-7fe1939c0000 rw-p 00004000 08:06 42735504                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_posixsubprocess.cpython-35m-x86_64-linux-gnu.so
+7fe1939c0000-7fe193a00000 rw-p 00000000 00:00 0 
+7fe193a00000-7fe193c00000 rw-p 00000000 00:00 0 
+7fe193c00000-7fe193c01000 rw-s 00000000 00:06 455                        /dev/nvidiactl
+7fe193c01000-7fe193c02000 rw-s 00000000 00:06 455                        /dev/nvidiactl
+7fe193c02000-7fe193c03000 rw-s 00000000 00:06 455                        /dev/nvidiactl
+7fe193c03000-7fe193c04000 rw-s 00000000 00:06 455                        /dev/nvidiactl
+7fe193c04000-7fe193c06000 r--s 0000b000 08:06 43389071                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/twitter-text-1.14.7.jar
+7fe193c06000-7fe193c0b000 r--s 001a4000 08:06 43389068                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/open-korean-text-2.1.0.jar
+7fe193c0b000-7fe193c12000 r--s 0003c000 08:06 43389070                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/snakeyaml-1.12.jar
+7fe193c12000-7fe193c55000 r-xp 00000000 08:01 1326026                    /usr/lib/nvidia-384/libnvidia-fatbinaryloader.so.384.130
+7fe193c55000-7fe193e54000 ---p 00043000 08:01 1326026                    /usr/lib/nvidia-384/libnvidia-fatbinaryloader.so.384.130
+7fe193e54000-7fe193e5f000 rw-p 00042000 08:01 1326026                    /usr/lib/nvidia-384/libnvidia-fatbinaryloader.so.384.130
+7fe193e5f000-7fe193e64000 rw-p 00000000 00:00 0 
+7fe193e64000-7fe1962ed000 r-xp 00000000 08:01 274386                     /usr/local/cuda-9.0/targets/x86_64-linux/lib/libcurand.so.9.0.176
+7fe1962ed000-7fe1964ec000 ---p 02489000 08:01 274386                     /usr/local/cuda-9.0/targets/x86_64-linux/lib/libcurand.so.9.0.176
+7fe1964ec000-7fe1978be000 rw-p 02488000 08:01 274386                     /usr/local/cuda-9.0/targets/x86_64-linux/lib/libcurand.so.9.0.176
+7fe1978be000-7fe197dc8000 rw-p 00000000 00:00 0 
+7fe197dc8000-7fe19fbf6000 r-xp 00000000 08:01 274379                     /usr/local/cuda-9.0/targets/x86_64-linux/lib/libcufft.so.9.0.176
+7fe19fbf6000-7fe19fdf6000 ---p 07e2e000 08:01 274379                     /usr/local/cuda-9.0/targets/x86_64-linux/lib/libcufft.so.9.0.176
+7fe19fdf6000-7fe19fe05000 rw-p 07e2e000 08:01 274379                     /usr/local/cuda-9.0/targets/x86_64-linux/lib/libcufft.so.9.0.176
+7fe19fe05000-7fe19fe69000 rw-p 00000000 00:00 0 
+7fe19fe69000-7fe1a0989000 r-xp 00000000 08:01 1326096                    /usr/lib/x86_64-linux-gnu/libcuda.so.384.130
+7fe1a0989000-7fe1a0b88000 ---p 00b20000 08:01 1326096                    /usr/lib/x86_64-linux-gnu/libcuda.so.384.130
+7fe1a0b88000-7fe1a0cd9000 rw-p 00b1f000 08:01 1326096                    /usr/lib/x86_64-linux-gnu/libcuda.so.384.130
+7fe1a0cd9000-7fe1a0ce7000 rw-p 00000000 00:00 0 
+7fe1a0ce7000-7fe1a0cf8000 r-xp 00000000 08:06 39324215                   /home/ckg/anaconda3/envs/tensorflow/lib/libgcc_s.so.1
+7fe1a0cf8000-7fe1a0ef7000 ---p 00011000 08:06 39324215                   /home/ckg/anaconda3/envs/tensorflow/lib/libgcc_s.so.1
+7fe1a0ef7000-7fe1a0ef8000 r--p 00010000 08:06 39324215                   /home/ckg/anaconda3/envs/tensorflow/lib/libgcc_s.so.1
+7fe1a0ef8000-7fe1a0ef9000 rw-p 00011000 08:06 39324215                   /home/ckg/anaconda3/envs/tensorflow/lib/libgcc_s.so.1
+7fe1a0ef9000-7fe1a1023000 r-xp 00000000 08:06 39324403                   /home/ckg/anaconda3/envs/tensorflow/lib/libstdc++.so.6.0.24
+7fe1a1023000-7fe1a1222000 ---p 0012a000 08:06 39324403                   /home/ckg/anaconda3/envs/tensorflow/lib/libstdc++.so.6.0.24
+7fe1a1222000-7fe1a122c000 r--p 00129000 08:06 39324403                   /home/ckg/anaconda3/envs/tensorflow/lib/libstdc++.so.6.0.24
+7fe1a122c000-7fe1a1230000 rw-p 00133000 08:06 39324403                   /home/ckg/anaconda3/envs/tensorflow/lib/libstdc++.so.6.0.24
+7fe1a1230000-7fe1a1233000 rw-p 00000000 00:00 0 
+7fe1a1233000-7fe1a1255000 r-xp 00000000 08:06 39324227                   /home/ckg/anaconda3/envs/tensorflow/lib/libgomp.so.1.0.0
+7fe1a1255000-7fe1a1454000 ---p 00022000 08:06 39324227                   /home/ckg/anaconda3/envs/tensorflow/lib/libgomp.so.1.0.0
+7fe1a1454000-7fe1a1455000 r--p 00021000 08:06 39324227                   /home/ckg/anaconda3/envs/tensorflow/lib/libgomp.so.1.0.0
+7fe1a1455000-7fe1a1456000 rw-p 00022000 08:06 39324227                   /home/ckg/anaconda3/envs/tensorflow/lib/libgomp.so.1.0.0
+7fe1a1456000-7fe1a14bf000 r-xp 00000000 08:01 274342                     /usr/local/cuda-9.0/targets/x86_64-linux/lib/libcudart.so.9.0.176
+7fe1a14bf000-7fe1a16be000 ---p 00069000 08:01 274342                     /usr/local/cuda-9.0/targets/x86_64-linux/lib/libcudart.so.9.0.176
+7fe1a16be000-7fe1a16c2000 rw-p 00068000 08:01 274342                     /usr/local/cuda-9.0/targets/x86_64-linux/lib/libcudart.so.9.0.176
+7fe1a16c2000-7fe1a16c3000 rw-p 00000000 00:00 0 
+7fe1a16c3000-7fe1b28bd000 r-xp 00000000 08:01 272997                     /usr/local/cuda-9.0/targets/x86_64-linux/lib/libcudnn.so.7
+7fe1b28bd000-7fe1b2abd000 ---p 111fa000 08:01 272997                     /usr/local/cuda-9.0/targets/x86_64-linux/lib/libcudnn.so.7
+7fe1b2abd000-7fe1b2b10000 rw-p 111fa000 08:01 272997                     /usr/local/cuda-9.0/targets/x86_64-linux/lib/libcudnn.so.7
+7fe1b2b10000-7fe1b2b5a000 rw-p 00000000 00:00 0 
+7fe1b2b5a000-7fe1b7509000 r-xp 00000000 08:01 274366                     /usr/local/cuda-9.0/targets/x86_64-linux/lib/libcusolver.so.9.0.176
+7fe1b7509000-7fe1b7709000 ---p 049af000 08:01 274366                     /usr/local/cuda-9.0/targets/x86_64-linux/lib/libcusolver.so.9.0.176
+7fe1b7709000-7fe1b7743000 rw-p 049af000 08:01 274366                     /usr/local/cuda-9.0/targets/x86_64-linux/lib/libcusolver.so.9.0.176
+7fe1b7743000-7fe1b7755000 rw-p 00000000 00:00 0 
+7fe1b7755000-7fe1ba946000 r-xp 00000000 08:01 274371                     /usr/local/cuda-9.0/targets/x86_64-linux/lib/libcublas.so.9.0.176
+7fe1ba946000-7fe1bab45000 ---p 031f1000 08:01 274371                     /usr/local/cuda-9.0/targets/x86_64-linux/lib/libcublas.so.9.0.176
+7fe1bab45000-7fe1bab7c000 rw-p 031f0000 08:01 274371                     /usr/local/cuda-9.0/targets/x86_64-linux/lib/libcublas.so.9.0.176
+7fe1bab7c000-7fe1bab8b000 rw-p 00000000 00:00 0 
+7fe1bab8b000-7fe1bb921000 r-xp 00000000 08:06 42991672                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/libtensorflow_framework.so
+7fe1bb921000-7fe1bbb20000 ---p 00d96000 08:06 42991672                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/libtensorflow_framework.so
+7fe1bbb20000-7fe1bbb67000 r--p 00d95000 08:06 42991672                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/libtensorflow_framework.so
+7fe1bbb67000-7fe1bbb68000 rw-p 00ddc000 08:06 42991672                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/libtensorflow_framework.so
+7fe1bbb68000-7fe1bbb73000 rw-p 00000000 00:00 0 
+7fe1bbb73000-7fe1e2737000 r-xp 00000000 08:06 42995445                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+7fe1e2737000-7fe1e2937000 ---p 26bc4000 08:06 42995445                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+7fe1e2937000-7fe1e2aab000 r--p 26bc4000 08:06 42995445                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+7fe1e2aab000-7fe1e2ab9000 rw-p 26d38000 08:06 42995445                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+7fe1e2ab9000-7fe1e2b97000 rw-p 00000000 00:00 0 
+7fe1e2b97000-7fe1e2c50000 r-xp 00000000 08:06 42861498                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/random/mtrand.cpython-35m-x86_64-linux-gnu.so
+7fe1e2c50000-7fe1e2e50000 ---p 000b9000 08:06 42861498                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/random/mtrand.cpython-35m-x86_64-linux-gnu.so
+7fe1e2e50000-7fe1e2e75000 rw-p 000b9000 08:06 42861498                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/random/mtrand.cpython-35m-x86_64-linux-gnu.so
+7fe1e2e75000-7fe1e2eb7000 rw-p 00000000 00:00 0 
+7fe1e2eb7000-7fe1e2ec0000 r-xp 00000000 08:06 42861710                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/fft/fftpack_lite.cpython-35m-x86_64-linux-gnu.so
+7fe1e2ec0000-7fe1e30bf000 ---p 00009000 08:06 42861710                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/fft/fftpack_lite.cpython-35m-x86_64-linux-gnu.so
+7fe1e30bf000-7fe1e30c0000 rw-p 00008000 08:06 42861710                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/fft/fftpack_lite.cpython-35m-x86_64-linux-gnu.so
+7fe1e30c0000-7fe1e3140000 rw-p 00000000 00:00 0 
+7fe1e3140000-7fe1e3169000 r-xp 00000000 08:06 42861158                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/linalg/_umath_linalg.cpython-35m-x86_64-linux-gnu.so
+7fe1e3169000-7fe1e3368000 ---p 00029000 08:06 42861158                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/linalg/_umath_linalg.cpython-35m-x86_64-linux-gnu.so
+7fe1e3368000-7fe1e336a000 rw-p 00028000 08:06 42861158                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/linalg/_umath_linalg.cpython-35m-x86_64-linux-gnu.so
+7fe1e336a000-7fe1e336d000 rw-p 000c6000 08:06 42861158                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/linalg/_umath_linalg.cpython-35m-x86_64-linux-gnu.so
+7fe1e336d000-7fe1e3371000 r-xp 00000000 08:06 42861161                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/linalg/lapack_lite.cpython-35m-x86_64-linux-gnu.so
+7fe1e3371000-7fe1e3571000 ---p 00004000 08:06 42861161                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/linalg/lapack_lite.cpython-35m-x86_64-linux-gnu.so
+7fe1e3571000-7fe1e3572000 rw-p 00004000 08:06 42861161                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/linalg/lapack_lite.cpython-35m-x86_64-linux-gnu.so
+7fe1e3572000-7fe1e3574000 rw-p 00019000 08:06 42861161                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/linalg/lapack_lite.cpython-35m-x86_64-linux-gnu.so
+7fe1e3574000-7fe1e35f4000 rw-p 00000000 00:00 0 
+7fe1e35f4000-7fe1e35f6000 r-xp 00000000 08:06 42735335                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/grp.cpython-35m-x86_64-linux-gnu.so
+7fe1e35f6000-7fe1e37f5000 ---p 00002000 08:06 42735335                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/grp.cpython-35m-x86_64-linux-gnu.so
+7fe1e37f5000-7fe1e37f6000 r--p 00001000 08:06 42735335                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/grp.cpython-35m-x86_64-linux-gnu.so
+7fe1e37f6000-7fe1e37f7000 rw-p 00002000 08:06 42735335                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/grp.cpython-35m-x86_64-linux-gnu.so
+7fe1e37f7000-7fe1e381c000 r-xp 00000000 08:06 39458088                   /home/ckg/anaconda3/envs/tensorflow/lib/liblzma.so.5.2.4
+7fe1e381c000-7fe1e3a1b000 ---p 00025000 08:06 39458088                   /home/ckg/anaconda3/envs/tensorflow/lib/liblzma.so.5.2.4
+7fe1e3a1b000-7fe1e3a1c000 r--p 00024000 08:06 39458088                   /home/ckg/anaconda3/envs/tensorflow/lib/liblzma.so.5.2.4
+7fe1e3a1c000-7fe1e3a1d000 rw-p 00025000 08:06 39458088                   /home/ckg/anaconda3/envs/tensorflow/lib/liblzma.so.5.2.4
+7fe1e3a1d000-7fe1e3a24000 r-xp 00000000 08:06 42735667                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_lzma.cpython-35m-x86_64-linux-gnu.so
+7fe1e3a24000-7fe1e3c24000 ---p 00007000 08:06 42735667                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_lzma.cpython-35m-x86_64-linux-gnu.so
+7fe1e3c24000-7fe1e3c25000 r--p 00007000 08:06 42735667                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_lzma.cpython-35m-x86_64-linux-gnu.so
+7fe1e3c25000-7fe1e3c27000 rw-p 00008000 08:06 42735667                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_lzma.cpython-35m-x86_64-linux-gnu.so
+7fe1e3c27000-7fe1e3c3b000 r-xp 00000000 08:06 42735782                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_bz2.cpython-35m-x86_64-linux-gnu.so
+7fe1e3c3b000-7fe1e3e3a000 ---p 00014000 08:06 42735782                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_bz2.cpython-35m-x86_64-linux-gnu.so
+7fe1e3e3a000-7fe1e3e3b000 r--p 00013000 08:06 42735782                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_bz2.cpython-35m-x86_64-linux-gnu.so
+7fe1e3e3b000-7fe1e3e3d000 rw-p 00014000 08:06 42735782                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_bz2.cpython-35m-x86_64-linux-gnu.so
+7fe1e3e3d000-7fe1e3e44000 r-xp 00000000 08:06 42735642                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/zlib.cpython-35m-x86_64-linux-gnu.so
+7fe1e3e44000-7fe1e4043000 ---p 00007000 08:06 42735642                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/zlib.cpython-35m-x86_64-linux-gnu.so
+7fe1e4043000-7fe1e4044000 r--p 00006000 08:06 42735642                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/zlib.cpython-35m-x86_64-linux-gnu.so
+7fe1e4044000-7fe1e4046000 rw-p 00007000 08:06 42735642                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/zlib.cpython-35m-x86_64-linux-gnu.so
+7fe1e4046000-7fe1e40c6000 rw-p 00000000 00:00 0 
+7fe1e40c6000-7fe1e40c7000 rw-s 00000000 00:06 455                        /dev/nvidiactl
+7fe1e40c7000-7fe1e4247000 rw-p 00000000 00:00 0 
+7fe1e4247000-7fe1e4261000 r-xp 00000000 08:06 42735765                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_pickle.cpython-35m-x86_64-linux-gnu.so
+7fe1e4261000-7fe1e4460000 ---p 0001a000 08:06 42735765                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_pickle.cpython-35m-x86_64-linux-gnu.so
+7fe1e4460000-7fe1e4461000 r--p 00019000 08:06 42735765                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_pickle.cpython-35m-x86_64-linux-gnu.so
+7fe1e4461000-7fe1e4464000 rw-p 0001a000 08:06 42735765                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_pickle.cpython-35m-x86_64-linux-gnu.so
+7fe1e4464000-7fe1e6464000 rw-p 00000000 00:00 0 
+7fe1e6464000-7fe1e65f6000 r-xp 00000000 08:06 42861203                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/core/umath.cpython-35m-x86_64-linux-gnu.so
+7fe1e65f6000-7fe1e67f5000 ---p 00192000 08:06 42861203                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/core/umath.cpython-35m-x86_64-linux-gnu.so
+7fe1e67f5000-7fe1e67fb000 rw-p 00191000 08:06 42861203                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/core/umath.cpython-35m-x86_64-linux-gnu.so
+7fe1e67fb000-7fe1e67fd000 rw-p 00000000 00:00 0 
+7fe1e67fd000-7fe1e87fd000 rw-p 00000000 00:00 0 
+7fe1e87fd000-7fe1e87fe000 ---p 00000000 00:00 0 
+7fe1e87fe000-7fe1e8ffe000 rw-p 00000000 00:00 0 
+7fe1e8ffe000-7fe1eaffe000 rw-p 00000000 00:00 0 
+7fe1eaffe000-7fe1eafff000 ---p 00000000 00:00 0 
+7fe1eafff000-7fe1eb7ff000 rw-p 00000000 00:00 0 
+7fe1eb7ff000-7fe1eb800000 ---p 00000000 00:00 0 
+7fe1eb800000-7fe1ec000000 rw-p 00000000 00:00 0 
+7fe1ec000000-7fe1ec021000 rw-p 00000000 00:00 0 
+7fe1ec021000-7fe1f0000000 ---p 00000000 00:00 0 
+7fe1f0000000-7fe1f0003000 r--s 0001e000 08:06 43389075                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/komoran-3.0.jar
+7fe1f0003000-7fe1f0004000 r--s 00003000 08:06 43389074                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/shineware-ds-1.0.jar
+7fe1f0004000-7fe1f0007000 r--s 0075b000 08:06 43389065                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/kkma-2.0.jar
+7fe1f0007000-7fe1f0011000 r--s 00116000 08:01 1461751                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar
+7fe1f0011000-7fe1f00d1000 rw-p 00000000 00:00 0 
+7fe1f00d1000-7fe1f01c1000 r-xp 00000000 08:06 42861586                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/.libs/libgfortran-ed201abd.so.3.0.0
+7fe1f01c1000-7fe1f03c0000 ---p 000f0000 08:06 42861586                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/.libs/libgfortran-ed201abd.so.3.0.0
+7fe1f03c0000-7fe1f03c2000 rw-p 000ef000 08:06 42861586                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/.libs/libgfortran-ed201abd.so.3.0.0
+7fe1f03c2000-7fe1f03c3000 rw-p 00000000 00:00 0 
+7fe1f03c3000-7fe1f03cb000 rw-p 000f2000 08:06 42861586                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/.libs/libgfortran-ed201abd.so.3.0.0
+7fe1f03cb000-7fe1f26df000 r-xp 00000000 08:06 42861585                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/.libs/libopenblasp-r0-39a31c03.2.18.so
+7fe1f26df000-7fe1f28de000 ---p 02314000 08:06 42861585                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/.libs/libopenblasp-r0-39a31c03.2.18.so
+7fe1f28de000-7fe1f28fd000 rw-p 02313000 08:06 42861585                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/.libs/libopenblasp-r0-39a31c03.2.18.so
+7fe1f28fd000-7fe1f2960000 rw-p 00000000 00:00 0 
+7fe1f2960000-7fe1f29f6000 rw-p 02425000 08:06 42861585                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/.libs/libopenblasp-r0-39a31c03.2.18.so
+7fe1f29f6000-7fe1f2bc4000 r-xp 00000000 08:06 42861208                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/core/multiarray.cpython-35m-x86_64-linux-gnu.so
+7fe1f2bc4000-7fe1f2dc4000 ---p 001ce000 08:06 42861208                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/core/multiarray.cpython-35m-x86_64-linux-gnu.so
+7fe1f2dc4000-7fe1f2dd3000 rw-p 001ce000 08:06 42861208                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/core/multiarray.cpython-35m-x86_64-linux-gnu.so
+7fe1f2dd3000-7fe1f2de6000 rw-p 00000000 00:00 0 
+7fe1f2de6000-7fe1f2dec000 rw-p 0098a000 08:06 42861208                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/numpy/core/multiarray.cpython-35m-x86_64-linux-gnu.so
+7fe1f2dec000-7fe1f2e2c000 rw-p 00000000 00:00 0 
+7fe1f2e2c000-7fe1f2e2d000 ---p 00000000 00:00 0 
+7fe1f2e2d000-7fe1f366d000 rw-p 00000000 00:00 0 
+7fe1f366d000-7fe1f366e000 r-xp 00000000 08:06 42735205                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_opcode.cpython-35m-x86_64-linux-gnu.so
+7fe1f366e000-7fe1f386e000 ---p 00001000 08:06 42735205                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_opcode.cpython-35m-x86_64-linux-gnu.so
+7fe1f386e000-7fe1f386f000 r--p 00001000 08:06 42735205                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_opcode.cpython-35m-x86_64-linux-gnu.so
+7fe1f386f000-7fe1f3870000 rw-p 00002000 08:06 42735205                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_opcode.cpython-35m-x86_64-linux-gnu.so
+7fe1f3870000-7fe1f38b0000 rw-p 00000000 00:00 0 
+7fe1f38b0000-7fe1f38b4000 r-xp 00000000 08:06 42735491                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_random.cpython-35m-x86_64-linux-gnu.so
+7fe1f38b4000-7fe1f3ab3000 ---p 00004000 08:06 42735491                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_random.cpython-35m-x86_64-linux-gnu.so
+7fe1f3ab3000-7fe1f3ab4000 r--p 00003000 08:06 42735491                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_random.cpython-35m-x86_64-linux-gnu.so
+7fe1f3ab4000-7fe1f3ab5000 rw-p 00004000 08:06 42735491                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_random.cpython-35m-x86_64-linux-gnu.so
+7fe1f3ab5000-7fe1f3abb000 r-xp 00000000 08:06 42735608                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_hashlib.cpython-35m-x86_64-linux-gnu.so
+7fe1f3abb000-7fe1f3cba000 ---p 00006000 08:06 42735608                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_hashlib.cpython-35m-x86_64-linux-gnu.so
+7fe1f3cba000-7fe1f3cbb000 r--p 00005000 08:06 42735608                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_hashlib.cpython-35m-x86_64-linux-gnu.so
+7fe1f3cbb000-7fe1f3cbc000 rw-p 00006000 08:06 42735608                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_hashlib.cpython-35m-x86_64-linux-gnu.so
+7fe1f3cbc000-7fe1f3cd2000 r-xp 00000000 08:06 39458169                   /home/ckg/anaconda3/envs/tensorflow/lib/libz.so.1.2.11
+7fe1f3cd2000-7fe1f3ed1000 ---p 00016000 08:06 39458169                   /home/ckg/anaconda3/envs/tensorflow/lib/libz.so.1.2.11
+7fe1f3ed1000-7fe1f3ed2000 r--p 00015000 08:06 39458169                   /home/ckg/anaconda3/envs/tensorflow/lib/libz.so.1.2.11
+7fe1f3ed2000-7fe1f3ed3000 rw-p 00016000 08:06 39458169                   /home/ckg/anaconda3/envs/tensorflow/lib/libz.so.1.2.11
+7fe1f3ed3000-7fe1f3ed9000 r-xp 00000000 08:06 42735601                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/binascii.cpython-35m-x86_64-linux-gnu.so
+7fe1f3ed9000-7fe1f40d8000 ---p 00006000 08:06 42735601                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/binascii.cpython-35m-x86_64-linux-gnu.so
+7fe1f40d8000-7fe1f40d9000 r--p 00005000 08:06 42735601                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/binascii.cpython-35m-x86_64-linux-gnu.so
+7fe1f40d9000-7fe1f40da000 rw-p 00006000 08:06 42735601                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/binascii.cpython-35m-x86_64-linux-gnu.so
+7fe1f40da000-7fe1f411a000 rw-p 00000000 00:00 0 
+7fe1f411a000-7fe1f4330000 r-xp 00000000 08:06 42737283                   /home/ckg/anaconda3/envs/tensorflow/lib/libcrypto.so.1.0.0
+7fe1f4330000-7fe1f452f000 ---p 00216000 08:06 42737283                   /home/ckg/anaconda3/envs/tensorflow/lib/libcrypto.so.1.0.0
+7fe1f452f000-7fe1f454b000 r--p 00215000 08:06 42737283                   /home/ckg/anaconda3/envs/tensorflow/lib/libcrypto.so.1.0.0
+7fe1f454b000-7fe1f4556000 rw-p 00231000 08:06 42737283                   /home/ckg/anaconda3/envs/tensorflow/lib/libcrypto.so.1.0.0
+7fe1f4556000-7fe1f455a000 rw-p 00000000 00:00 0 
+7fe1f455a000-7fe1f45c6000 r-xp 00000000 08:06 39455833                   /home/ckg/anaconda3/envs/tensorflow/lib/libssl.so.1.0.0
+7fe1f45c6000-7fe1f47c5000 ---p 0006c000 08:06 39455833                   /home/ckg/anaconda3/envs/tensorflow/lib/libssl.so.1.0.0
+7fe1f47c5000-7fe1f47ca000 r--p 0006b000 08:06 39455833                   /home/ckg/anaconda3/envs/tensorflow/lib/libssl.so.1.0.0
+7fe1f47ca000-7fe1f47d0000 rw-p 00070000 08:06 39455833                   /home/ckg/anaconda3/envs/tensorflow/lib/libssl.so.1.0.0
+7fe1f47d0000-7fe1f47e8000 r-xp 00000000 08:06 42735769                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_ssl.cpython-35m-x86_64-linux-gnu.so
+7fe1f47e8000-7fe1f49e8000 ---p 00018000 08:06 42735769                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_ssl.cpython-35m-x86_64-linux-gnu.so
+7fe1f49e8000-7fe1f49e9000 r--p 00018000 08:06 42735769                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_ssl.cpython-35m-x86_64-linux-gnu.so
+7fe1f49e9000-7fe1f49ee000 rw-p 00019000 08:06 42735769                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_ssl.cpython-35m-x86_64-linux-gnu.so
+7fe1f49ee000-7fe1f4a2e000 rw-p 00000000 00:00 0 
+7fe1f4a2e000-7fe1f4a44000 r-xp 00000000 08:06 42735762                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_datetime.cpython-35m-x86_64-linux-gnu.so
+7fe1f4a44000-7fe1f4c44000 ---p 00016000 08:06 42735762                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_datetime.cpython-35m-x86_64-linux-gnu.so
+7fe1f4c44000-7fe1f4c45000 r--p 00016000 08:06 42735762                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_datetime.cpython-35m-x86_64-linux-gnu.so
+7fe1f4c45000-7fe1f4c47000 rw-p 00017000 08:06 42735762                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_datetime.cpython-35m-x86_64-linux-gnu.so
+7fe1f4c47000-7fe1f4c88000 rw-p 00000000 00:00 0 
+7fe1f4c88000-7fe1f4c8a000 r-xp 00000000 08:06 42735340                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_bisect.cpython-35m-x86_64-linux-gnu.so
+7fe1f4c8a000-7fe1f4e89000 ---p 00002000 08:06 42735340                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_bisect.cpython-35m-x86_64-linux-gnu.so
+7fe1f4e89000-7fe1f4e8a000 r--p 00001000 08:06 42735340                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_bisect.cpython-35m-x86_64-linux-gnu.so
+7fe1f4e8a000-7fe1f4e8b000 rw-p 00002000 08:06 42735340                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_bisect.cpython-35m-x86_64-linux-gnu.so
+7fe1f4e8b000-7fe1f4e92000 r-xp 00000000 08:06 42735640                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/select.cpython-35m-x86_64-linux-gnu.so
+7fe1f4e92000-7fe1f5091000 ---p 00007000 08:06 42735640                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/select.cpython-35m-x86_64-linux-gnu.so
+7fe1f5091000-7fe1f5092000 r--p 00006000 08:06 42735640                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/select.cpython-35m-x86_64-linux-gnu.so
+7fe1f5092000-7fe1f5094000 rw-p 00007000 08:06 42735640                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/select.cpython-35m-x86_64-linux-gnu.so
+7fe1f5094000-7fe1f509e000 r-xp 00000000 08:06 42735701                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/math.cpython-35m-x86_64-linux-gnu.so
+7fe1f509e000-7fe1f529e000 ---p 0000a000 08:06 42735701                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/math.cpython-35m-x86_64-linux-gnu.so
+7fe1f529e000-7fe1f529f000 r--p 0000a000 08:06 42735701                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/math.cpython-35m-x86_64-linux-gnu.so
+7fe1f529f000-7fe1f52a1000 rw-p 0000b000 08:06 42735701                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/math.cpython-35m-x86_64-linux-gnu.so
+7fe1f52a1000-7fe1f52b7000 r-xp 00000000 08:06 42735763                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_socket.cpython-35m-x86_64-linux-gnu.so
+7fe1f52b7000-7fe1f54b6000 ---p 00016000 08:06 42735763                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_socket.cpython-35m-x86_64-linux-gnu.so
+7fe1f54b6000-7fe1f54b7000 r--p 00015000 08:06 42735763                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_socket.cpython-35m-x86_64-linux-gnu.so
+7fe1f54b7000-7fe1f54bc000 rw-p 00016000 08:06 42735763                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_socket.cpython-35m-x86_64-linux-gnu.so
+7fe1f54bc000-7fe1f54be000 r--s 00008000 08:06 43389069                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/shineware-common-1.0.jar
+7fe1f54be000-7fe1f54c2000 r--s 00025000 08:06 43389072                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/jhannanum-0.8.4.jar
+7fe1f54c2000-7fe1f54dd000 r--s 001d6000 08:01 1461745                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar
+7fe1f54dd000-7fe1f551d000 rw-p 00000000 00:00 0 
+7fe1f551d000-7fe1f5527000 r-xp 00000000 08:06 42735698                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_struct.cpython-35m-x86_64-linux-gnu.so
+7fe1f5527000-7fe1f5726000 ---p 0000a000 08:06 42735698                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_struct.cpython-35m-x86_64-linux-gnu.so
+7fe1f5726000-7fe1f5727000 r--p 00009000 08:06 42735698                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_struct.cpython-35m-x86_64-linux-gnu.so
+7fe1f5727000-7fe1f572a000 rw-p 0000a000 08:06 42735698                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_struct.cpython-35m-x86_64-linux-gnu.so
+7fe1f572a000-7fe1f5731000 r-xp 00000000 08:06 39325029                   /home/ckg/anaconda3/envs/tensorflow/lib/libffi.so.6.0.4
+7fe1f5731000-7fe1f5931000 ---p 00007000 08:06 39325029                   /home/ckg/anaconda3/envs/tensorflow/lib/libffi.so.6.0.4
+7fe1f5931000-7fe1f5932000 r--p 00007000 08:06 39325029                   /home/ckg/anaconda3/envs/tensorflow/lib/libffi.so.6.0.4
+7fe1f5932000-7fe1f5933000 rw-p 00008000 08:06 39325029                   /home/ckg/anaconda3/envs/tensorflow/lib/libffi.so.6.0.4
+7fe1f5933000-7fe1f5951000 r-xp 00000000 08:06 42735774                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_ctypes.cpython-35m-x86_64-linux-gnu.so
+7fe1f5951000-7fe1f5b50000 ---p 0001e000 08:06 42735774                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_ctypes.cpython-35m-x86_64-linux-gnu.so
+7fe1f5b50000-7fe1f5b51000 r--p 0001d000 08:06 42735774                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_ctypes.cpython-35m-x86_64-linux-gnu.so
+7fe1f5b51000-7fe1f5b55000 rw-p 0001e000 08:06 42735774                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_ctypes.cpython-35m-x86_64-linux-gnu.so
+7fe1f5b55000-7fe1f5c15000 rw-p 00000000 00:00 0 
+7fe1f5c15000-7fe1f5c18000 r-xp 00000000 08:06 42735517                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_heapq.cpython-35m-x86_64-linux-gnu.so
+7fe1f5c18000-7fe1f5e17000 ---p 00003000 08:06 42735517                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_heapq.cpython-35m-x86_64-linux-gnu.so
+7fe1f5e17000-7fe1f5e18000 r--p 00002000 08:06 42735517                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_heapq.cpython-35m-x86_64-linux-gnu.so
+7fe1f5e18000-7fe1f5e1a000 rw-p 00003000 08:06 42735517                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/lib-dynload/_heapq.cpython-35m-x86_64-linux-gnu.so
+7fe1f5e1a000-7fe1f5e5a000 rw-p 00000000 00:00 0 
+7fe1f5e5a000-7fe1f6959000 r--p 00000000 08:01 1322225                    /usr/lib/locale/locale-archive
+7fe1f6959000-7fe1f6a61000 r-xp 00000000 08:01 1975409                    /lib/x86_64-linux-gnu/libm-2.23.so
+7fe1f6a61000-7fe1f6c60000 ---p 00108000 08:01 1975409                    /lib/x86_64-linux-gnu/libm-2.23.so
+7fe1f6c60000-7fe1f6c61000 r--p 00107000 08:01 1975409                    /lib/x86_64-linux-gnu/libm-2.23.so
+7fe1f6c61000-7fe1f6c62000 rw-p 00108000 08:01 1975409                    /lib/x86_64-linux-gnu/libm-2.23.so
+7fe1f6c62000-7fe1f6c69000 r-xp 00000000 08:01 1975493                    /lib/x86_64-linux-gnu/librt-2.23.so
+7fe1f6c69000-7fe1f6e68000 ---p 00007000 08:01 1975493                    /lib/x86_64-linux-gnu/librt-2.23.so
+7fe1f6e68000-7fe1f6e69000 r--p 00006000 08:01 1975493                    /lib/x86_64-linux-gnu/librt-2.23.so
+7fe1f6e69000-7fe1f6e6a000 rw-p 00007000 08:01 1975493                    /lib/x86_64-linux-gnu/librt-2.23.so
+7fe1f6e6a000-7fe1f6e6c000 r-xp 00000000 08:01 1975520                    /lib/x86_64-linux-gnu/libutil-2.23.so
+7fe1f6e6c000-7fe1f706b000 ---p 00002000 08:01 1975520                    /lib/x86_64-linux-gnu/libutil-2.23.so
+7fe1f706b000-7fe1f706c000 r--p 00001000 08:01 1975520                    /lib/x86_64-linux-gnu/libutil-2.23.so
+7fe1f706c000-7fe1f706d000 rw-p 00002000 08:01 1975520                    /lib/x86_64-linux-gnu/libutil-2.23.so
+7fe1f706d000-7fe1f7070000 r-xp 00000000 08:01 1975363                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7fe1f7070000-7fe1f726f000 ---p 00003000 08:01 1975363                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7fe1f726f000-7fe1f7270000 r--p 00002000 08:01 1975363                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7fe1f7270000-7fe1f7271000 rw-p 00003000 08:01 1975363                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7fe1f7271000-7fe1f7431000 r-xp 00000000 08:01 1975339                    /lib/x86_64-linux-gnu/libc-2.23.so
+7fe1f7431000-7fe1f7631000 ---p 001c0000 08:01 1975339                    /lib/x86_64-linux-gnu/libc-2.23.so
+7fe1f7631000-7fe1f7635000 r--p 001c0000 08:01 1975339                    /lib/x86_64-linux-gnu/libc-2.23.so
+7fe1f7635000-7fe1f7637000 rw-p 001c4000 08:01 1975339                    /lib/x86_64-linux-gnu/libc-2.23.so
+7fe1f7637000-7fe1f763b000 rw-p 00000000 00:00 0 
+7fe1f763b000-7fe1f7653000 r-xp 00000000 08:01 1975485                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7fe1f7653000-7fe1f7852000 ---p 00018000 08:01 1975485                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7fe1f7852000-7fe1f7853000 r--p 00017000 08:01 1975485                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7fe1f7853000-7fe1f7854000 rw-p 00018000 08:01 1975485                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7fe1f7854000-7fe1f7858000 rw-p 00000000 00:00 0 
+7fe1f7858000-7fe1f787e000 r-xp 00000000 08:01 1975311                    /lib/x86_64-linux-gnu/ld-2.23.so
+7fe1f787e000-7fe1f7880000 r--s 00012000 08:06 43389067                   /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/aho-corasick.jar
+7fe1f7880000-7fe1f7881000 r--s 0000a000 08:01 1461754                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar
+7fe1f7881000-7fe1f7887000 r--s 0003b000 08:01 1461752                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+7fe1f7887000-7fe1f7a60000 rw-p 00000000 00:00 0 
+7fe1f7a60000-7fe1f7a63000 r--s 0000f000 08:01 1461744                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+7fe1f7a63000-7fe1f7a64000 r--s 00010000 08:01 1461750                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar
+7fe1f7a64000-7fe1f7a67000 r--s 00038000 08:01 1461748                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+7fe1f7a67000-7fe1f7a69000 r--s 00008000 08:01 1461753                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar
+7fe1f7a69000-7fe1f7a6b000 r--s 00001000 08:01 1461749                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar
+7fe1f7a6b000-7fe1f7a73000 rw-s 00000000 08:01 1457134                    /tmp/hsperfdata_ckg/5086 (deleted)
+7fe1f7a73000-7fe1f7a74000 rw-p 00000000 00:00 0 
+7fe1f7a74000-7fe1f7a75000 ---p 00000000 00:00 0 
+7fe1f7a75000-7fe1f7a76000 rwxp 00000000 00:00 0 
+7fe1f7a76000-7fe1f7a7d000 r--s 00000000 08:01 1580331                    /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7fe1f7a7d000-7fe1f7a7e000 r--p 00025000 08:01 1975311                    /lib/x86_64-linux-gnu/ld-2.23.so
+7fe1f7a7e000-7fe1f7a7f000 rw-p 00026000 08:01 1975311                    /lib/x86_64-linux-gnu/ld-2.23.so
+7fe1f7a7f000-7fe1f7a80000 rw-p 00000000 00:00 0 
+7ffc95393000-7ffc95396000 ---p 00000000 00:00 0 
+7ffc95396000-7ffc95493000 rw-p 00000000 00:00 0                          [stack]
+7ffc954c1000-7ffc954c4000 r--p 00000000 00:00 0                          [vvar]
+7ffc954c4000-7ffc954c6000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF8 -ea -Xmx1024m 
+java_command: <unknown>
+java_class_path (initial): /home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java:/home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/bin:/home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/*:/home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/jhannanum-0.8.4.jar:/home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/kkma-2.0.jar:/home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/aho-corasick.jar:/home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/shineware-common-1.0.jar:/home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/shineware-ds-1.0.jar:/home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/komoran-3.0.jar:/home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/snakeyaml-1.12.jar:/home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/scala-library-2.12.3.jar:/home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/open-korean-text-2.1.0.jar:/home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/twitter-text-1.14.7.jar:/home/ckg/anaconda3/envs/tensorflow/lib/python3.5/site-packages/konlpy/java/*
+Launcher Type: generic
+
+Environment Variables:
+PATH=/home/ckg/anaconda3/bin:/usr/local/cuda-9.0/bin:/home/ckg/bin:/home/ckg/.local/bin:/home/ckg/anaconda3/bin:/usr/local/cuda-9.0/bin:/home/ckg/bin:/home/ckg/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin}}
+LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:/usr/local/cuda-9.0/lib64
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xa71a30], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xa71a30], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8b8f40], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x8b8f40], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x8b8f40], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8b8f40], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x8b8df0], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x8b92c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: [libjvm.so+0x8b92c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x8b92c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=16.04
+DISTRIB_CODENAME=xenial
+DISTRIB_DESCRIPTION="Ubuntu 16.04.4 LTS"
+
+uname:Linux 4.15.0-36-generic #39~16.04.1-Ubuntu SMP Tue Sep 25 08:59:23 UTC 2018 x86_64
+libc:glibc 2.23 NPTL 2.23 
+rlimit: STACK 8192k, CORE 0k, NPROC 63726, NOFILE 1048576, AS infinity
+load average:2.61 2.04 2.17
+
+/proc/meminfo:
+MemTotal:       16380760 kB
+MemFree:          205440 kB
+MemAvailable:     968136 kB
+Buffers:           10392 kB
+Cached:          1146864 kB
+SwapCached:        21960 kB
+Active:         14164840 kB
+Inactive:        1579376 kB
+Active(anon):   13511940 kB
+Inactive(anon):  1228472 kB
+Active(file):     652900 kB
+Inactive(file):   350904 kB
+Unevictable:          32 kB
+Mlocked:              32 kB
+SwapTotal:      39061500 kB
+SwapFree:       37797700 kB
+Dirty:               492 kB
+Writeback:             0 kB
+AnonPages:      14581508 kB
+Mapped:           757188 kB
+Shmem:            153328 kB
+Slab:              91588 kB
+SReclaimable:      32220 kB
+SUnreclaim:        59368 kB
+KernelStack:       11708 kB
+PageTables:        82604 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    47251880 kB
+Committed_AS:   24814128 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      452380 kB
+DirectMap2M:    13133824 kB
+DirectMap1G:     3145728 kB
+
+
+CPU:total 4 (initial active 4) (4 cores per cpu, 1 threads per core) family 6 model 158 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
+stepping	: 9
+microcode	: 0x8e
+cpu MHz		: 3357.785
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 4
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6000.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
+stepping	: 9
+microcode	: 0x8e
+cpu MHz		: 3358.807
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 4
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6000.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
+stepping	: 9
+microcode	: 0x8e
+cpu MHz		: 3361.843
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 2
+cpu cores	: 4
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6000.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
+stepping	: 9
+microcode	: 0x8e
+cpu MHz		: 3391.146
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 3
+cpu cores	: 4
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6000.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 16380760k(205500k free), swap 39061500k(37797700k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.181-b13) for linux-amd64 JRE (1.8.0_181-8u181-b13-0ubuntu0.16.04.1-b13), built on Jul 30 2018 21:06:27 by "buildd" with gcc 5.4.0 20160609
+
+time: Fri Oct 12 20:55:30 2018
+elapsed time: 39 seconds (0d 0h 0m 39s)
+
