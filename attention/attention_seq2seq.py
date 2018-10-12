@@ -4,21 +4,20 @@ from attention_model import s2s
 from konlpy.tag import Twitter
 
 twitter = Twitter()
-
 input_sent = []
-with open('/home/fitlab/Seq2Seq_Series/input.log', 'r', encoding='utf-8') as content_file:
+with open('/Users/chageumgang/Desktop/Seq2Seq_Series/input.log', 'r', encoding='utf-8') as content_file:
     for line in content_file:
         tag = twitter.pos(line)[:-1]
         input_sent.append([i[0] for i in tag])
 
 output_sent = []
-with open('/home/fitlab/Seq2Seq_Series/output.log', 'r', encoding='utf-8') as content_file:
+with open('/Users/chageumgang/Desktop/Seq2Seq_Series/output.log', 'r', encoding='utf-8') as content_file:
     for line in content_file:
         tag = twitter.pos(line)[:-1]
         output_sent.append([i[0] for i in tag])
 
 vocab_list = []
-with open('/home/fitlab/Seq2Seq_Series/vocab.log', 'r', encoding='utf-8') as content_file:
+with open('/Users/chageumgang/Desktop/Seq2Seq_Series/vocab.log', 'r', encoding='utf-8') as content_file:
     for line in content_file:
         vocab_list.append(line[:-1])
 
@@ -68,14 +67,16 @@ sess = tf.Session()
 sess.run(tf.global_variables_initializer())
 
 for epoch in range(total_epoch):
-    _, loss = sess.run([S2S.optimizer, S2S.cost],
+    _, loss, softmax = sess.run([S2S.optimizer, S2S.cost, S2S.context_vector],
                        feed_dict={S2S.enc_input: input_batch,
                                   S2S.dec_input: output_batch,
                                   S2S.targets: target_batch})
 
     print('Epoch:', '%05d' % (epoch + 1),
           'cost =', '{:.10f}'.format(loss))
-
+    if epoch % 20 == 0:
+        for i in softmax:
+            print(i)
 print('최적화 완료!')
 
 output_sent = []
