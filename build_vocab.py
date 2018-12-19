@@ -1,9 +1,9 @@
-from konlpy.tag import Twitter
+from konlpy.tag import Mecab
 import numpy as np
 
 # '<start>', '<end>', '<pad>', '<%>'
 
-twitter = Twitter()
+twitter = Mecab()
 
 vocab_list = []
 with open('input.log', 'r', encoding='utf-8') as content_file:
