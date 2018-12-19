@@ -5,19 +5,19 @@ from konlpy.tag import Twitter
 
 twitter = Twitter()
 input_sent = []
-with open('/home/ckg/Seq2Seq_Series/input.log', 'r', encoding='utf-8') as content_file:
+with open('./input.log', 'r', encoding='utf-8') as content_file:
     for line in content_file:
         tag = twitter.pos(line)[:-1]
         input_sent.append([i[0] for i in tag])
 
 output_sent = []
-with open('/home/ckg/Seq2Seq_Series/output.log', 'r', encoding='utf-8') as content_file:
+with open('./output.log', 'r', encoding='utf-8') as content_file:
     for line in content_file:
         tag = twitter.pos(line)[:-1]
         output_sent.append([i[0] for i in tag])
 
 vocab_list = []
-with open('/home/ckg/Seq2Seq_Series/vocab.log', 'r', encoding='utf-8') as content_file:
+with open('./vocab.log', 'r', encoding='utf-8') as content_file:
     for line in content_file:
         vocab_list.append(line[:-1])
 
